@@ -1,0 +1,2282 @@
+{
+  "metadata": {
+    "country": "Ireland (Republic of Ireland, not all-island)",
+    "retrieved": "2026-10-04",
+    "units": "TWh/year, GW, litres diesel-equivalent/year, vehicles and kilometres",
+    "missingValue": null,
+    "important": "Not a complete calculator-ready series. Null required-energy totals are intentional. Source observations retained without fabricated history.",
+    "sources": {
+      "SEAI_balance": "https://www.seai.ie/sites/default/files/2025-05/National-Energy-Balance.xlsx",
+      "EirGrid_SEAI_electricity": "https://cms.eirgrid.ie/sites/default/files/publications/System-and-Renewable-Data-Summary-Report-V30.xlsx",
+      "CSO_fleet": "https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/THA10/JSON-stat/2.0/en",
+      "CSO_goods_2008_2014": "https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/THA14/JSON-stat/2.0/en",
+      "CSO_goods_2015_2023": "https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/THA19/JSON-stat/2.0/en"
+    },
+    "dieselEquivalentKWhPerLitre": 10.709999999999999,
+    "ktoeToTWh": 0.01163,
+    "definitions": {
+      "residentialHeat": "Residential coal + peat + petroleum + natural gas final consumption; excludes electricity, renewable fuels and ambient heat. Proxy for fossil heat, not end-use measurement.",
+      "commercialPublicHeat": "Commercial/public coal + peat + petroleum + natural gas final consumption.",
+      "industryHeat": "Industry coal + peat + petroleum + natural gas + non-renewable waste final consumption; fuel-use proxy, includes some non-heating uses.",
+      "railDiesel": "Diesel-equivalent volume derived from fossil rail diesel energy with calculator conversion; not measured litres. Biofuel and rail electricity excluded.",
+      "shippingDiesel": "Diesel-equivalent volume for domestic navigation petroleum use; excludes international marine bunkers and fisheries.",
+      "electricity": "SEAI electricity fuel mix supplied through EirGrid workbook; net exported generation, pumped hydro excluded; domestic renewable generation does not assign a clean share to imports.",
+      "smallPSVs": "Taxis/hackneys/limousines, NOT small buses.",
+      "tractorsAndMachinery": "Broad CSO category, not agricultural tractors alone; mileage flagged unreliable by CSO.",
+      "goodsByUnladenWeight": "Unladen weight bands, NOT gross-weight LGV/HGV classes. Requires an explicit mapping before use."
+    }
+  },
+  "Ireland": {
+    "2005": {
+      "year": 2005,
+      "status": "published inputs; vehicle mapping unresolved",
+      "electricity": {
+        "existingCarbonFreeElectricity": 1.873432,
+        "existingGasElectricity": 11.574,
+        "existingCoalElectricity": 6.389,
+        "existingPeatElectricity": 2.45,
+        "existingOilElectricity": 3.34,
+        "existingNonRenewableWasteElectricity": 0.0,
+        "netElectricityImports": 2.04415,
+        "totalElectricitySupply": 27.670582000000003,
+        "windGenerationTWh": 1.1119100000000002,
+        "solarGenerationTWh": 0.0,
+        "hydroGenerationTWh": 0.63126,
+        "otherRenewableGenerationTWh": 0.130262,
+        "currentWindCapacityGW": 0.46807,
+        "currentSolarCapacityGW": null,
+        "lowDemandDuringNightGW": null,
+        "lowDemandDuringDayGW": null
+      },
+      "heat": {
+        "residentialHeat": 29.72055761904136,
+        "commercialPublicHeat": 7.181425065811535,
+        "industryHeat": 20.075748939106784,
+        "homeOfficeHeat": 36.9019826848529
+      },
+      "roadTransport": {
+        "cars": {
+          "numVehicles": 1647331.0,
+          "distance": 17960.0,
+          "vehicleKm": 29586000000.0
+        },
+        "goodsVehicles": {
+          "numVehicles": 280217.0,
+          "distance": 24063.0,
+          "vehicleKm": 6743000000.0
+        },
+        "motorcycles": {
+          "numVehicles": 34373.0,
+          "distance": 3787.0,
+          "vehicleKm": 130000000.0
+        },
+        "tractorsAndMachinery": {
+          "numVehicles": 76002.0,
+          "distance": 19243.0,
+          "vehicleKm": 1463000000.0
+        },
+        "smallPSVs": {
+          "numVehicles": 22315.0,
+          "distance": 40189.0,
+          "vehicleKm": 897000000.0
+        },
+        "largePSVs": {
+          "numVehicles": 7489.0,
+          "distance": 38893.0,
+          "vehicleKm": 291000000.0
+        },
+        "exemptVehicles": {
+          "numVehicles": 18672.0,
+          "distance": 18281.0,
+          "vehicleKm": 341000000.0
+        },
+        "other": {
+          "numVehicles": 28751.0,
+          "distance": 11323.0,
+          "vehicleKm": 326000000.0
+        }
+      },
+      "goodsByUnladenWeight": [],
+      "railDieselEnergyTWh": 0.46308652791878174,
+      "railDiesel": 43238704.75432137,
+      "shippingFuelEnergyTWh": 0.5783044710559232,
+      "shippingDiesel": 53996682.63827482,
+      "internationalMarineBunkersTWh": 1.2413406036833359,
+      "actualTotalFinalEnergyTWh": 146.3895962811727,
+      "cleanEnergyAvailableTWh": 1.873432,
+      "cleanEnergyRequiredTWh": null
+    },
+    "2006": {
+      "year": 2006,
+      "status": "published inputs; vehicle mapping unresolved",
+      "electricity": {
+        "existingCarbonFreeElectricity": 2.474746877861062,
+        "existingGasElectricity": 13.785,
+        "existingCoalElectricity": 5.884,
+        "existingPeatElectricity": 2.138,
+        "existingOilElectricity": 2.834,
+        "existingNonRenewableWasteElectricity": 0.0,
+        "netElectricityImports": 1.7778778457142859,
+        "totalElectricitySupply": 28.89362472357535,
+        "windGenerationTWh": 1.6220412,
+        "solarGenerationTWh": 0.0,
+        "hydroGenerationTWh": 0.7242729778610624,
+        "otherRenewableGenerationTWh": 0.1284327,
+        "currentWindCapacityGW": 0.65127,
+        "currentSolarCapacityGW": null,
+        "lowDemandDuringNightGW": null,
+        "lowDemandDuringDayGW": null
+      },
+      "heat": {
+        "residentialHeat": 29.45585469694366,
+        "commercialPublicHeat": 7.152790721290025,
+        "industryHeat": 18.820209856929672,
+        "homeOfficeHeat": 36.608645418233685
+      },
+      "roadTransport": {
+        "cars": {
+          "numVehicles": 1746845.0,
+          "distance": 17552.0,
+          "vehicleKm": 30660000000.0
+        },
+        "goodsVehicles": {
+          "numVehicles": 305743.0,
+          "distance": 23516.0,
+          "vehicleKm": 7190000000.0
+        },
+        "motorcycles": {
+          "numVehicles": 34410.0,
+          "distance": 3701.0,
+          "vehicleKm": 127000000.0
+        },
+        "tractorsAndMachinery": {
+          "numVehicles": 76908.0,
+          "distance": 18806.0,
+          "vehicleKm": 1446000000.0
+        },
+        "smallPSVs": {
+          "numVehicles": 23644.0,
+          "distance": 39275.0,
+          "vehicleKm": 929000000.0
+        },
+        "largePSVs": {
+          "numVehicles": 7771.0,
+          "distance": 38009.0,
+          "vehicleKm": 295000000.0
+        },
+        "exemptVehicles": {
+          "numVehicles": 20231.0,
+          "distance": 17866.0,
+          "vehicleKm": 361000000.0
+        },
+        "other": {
+          "numVehicles": 31436.0,
+          "distance": 11065.0,
+          "vehicleKm": 348000000.0
+        }
+      },
+      "goodsByUnladenWeight": [],
+      "railDieselEnergyTWh": 0.46308652791878174,
+      "railDiesel": 43238704.75432137,
+      "shippingFuelEnergyTWh": 0.9380241086019901,
+      "shippingDiesel": 87583950.38300562,
+      "internationalMarineBunkersTWh": 1.5114451031511904,
+      "actualTotalFinalEnergyTWh": 150.36384717705997,
+      "cleanEnergyAvailableTWh": 2.474746877861062,
+      "cleanEnergyRequiredTWh": null
+    },
+    "2007": {
+      "year": 2007,
+      "status": "published inputs; vehicle mapping unresolved",
+      "electricity": {
+        "existingCarbonFreeElectricity": 2.8020598987644507,
+        "existingGasElectricity": 16.057660317226976,
+        "existingCoalElectricity": 5.436960213144679,
+        "existingPeatElectricity": 2.1621861245805922,
+        "existingOilElectricity": 1.8987124411277685,
+        "existingNonRenewableWasteElectricity": 0.0,
+        "netElectricityImports": 1.330350013,
+        "totalElectricitySupply": 29.687929007844467,
+        "windGenerationTWh": 1.9583705500000002,
+        "solarGenerationTWh": 0.0,
+        "hydroGenerationTWh": 0.6665755585647999,
+        "otherRenewableGenerationTWh": 0.17711379019965062,
+        "currentWindCapacityGW": 0.71526,
+        "currentSolarCapacityGW": null,
+        "lowDemandDuringNightGW": null,
+        "lowDemandDuringDayGW": null
+      },
+      "heat": {
+        "residentialHeat": 28.82840648586818,
+        "commercialPublicHeat": 6.992163808685467,
+        "industryHeat": 18.69073925932676,
+        "homeOfficeHeat": 35.82057029455365
+      },
+      "roadTransport": {
+        "cars": {
+          "numVehicles": 1858906.0,
+          "distance": 17200.0,
+          "vehicleKm": 31973000000.0
+        },
+        "goodsVehicles": {
+          "numVehicles": 335716.0,
+          "distance": 23044.0,
+          "vehicleKm": 7736000000.0
+        },
+        "motorcycles": {
+          "numVehicles": 35841.0,
+          "distance": 3626.0,
+          "vehicleKm": 130000000.0
+        },
+        "tractorsAndMachinery": {
+          "numVehicles": 78861.0,
+          "distance": 18429.0,
+          "vehicleKm": 1453000000.0
+        },
+        "smallPSVs": {
+          "numVehicles": 26139.0,
+          "distance": 38487.0,
+          "vehicleKm": 1006000000.0
+        },
+        "largePSVs": {
+          "numVehicles": 8181.0,
+          "distance": 37246.0,
+          "vehicleKm": 305000000.0
+        },
+        "exemptVehicles": {
+          "numVehicles": 22348.0,
+          "distance": 17507.0,
+          "vehicleKm": 391000000.0
+        },
+        "other": {
+          "numVehicles": 34483.0,
+          "distance": 10844.0,
+          "vehicleKm": 374000000.0
+        }
+      },
+      "goodsByUnladenWeight": [],
+      "railDieselEnergyTWh": 0.5008051800609137,
+      "railDiesel": 46760521.01409092,
+      "shippingFuelEnergyTWh": 0.7407629777530782,
+      "shippingDiesel": 69165544.14127715,
+      "internationalMarineBunkersTWh": 1.3244231568332672,
+      "actualTotalFinalEnergyTWh": 152.5117057412941,
+      "cleanEnergyAvailableTWh": 2.8020598987644507,
+      "cleanEnergyRequiredTWh": null
+    },
+    "2008": {
+      "year": 2008,
+      "status": "published inputs; vehicle mapping unresolved",
+      "electricity": {
+        "existingCarbonFreeElectricity": 3.595346114684625,
+        "existingGasElectricity": 16.71611760726461,
+        "existingCoalElectricity": 5.141862977743121,
+        "existingPeatElectricity": 2.754355145287677,
+        "existingOilElectricity": 1.7080560406986987,
+        "existingNonRenewableWasteElectricity": 0.0,
+        "netElectricityImports": 0.4502164290000001,
+        "totalElectricitySupply": 30.36595431467873,
+        "windGenerationTWh": 2.4100130155000006,
+        "solarGenerationTWh": 0.0,
+        "hydroGenerationTWh": 0.9683231755444001,
+        "otherRenewableGenerationTWh": 0.21700992364022367,
+        "currentWindCapacityGW": 0.920057,
+        "currentSolarCapacityGW": null,
+        "lowDemandDuringNightGW": null,
+        "lowDemandDuringDayGW": null
+      },
+      "heat": {
+        "residentialHeat": 31.90333216444875,
+        "commercialPublicHeat": 7.204022810537444,
+        "industryHeat": 18.320910346861748,
+        "homeOfficeHeat": 39.107354974986194
+      },
+      "roadTransport": {
+        "cars": {
+          "numVehicles": 1932729.0,
+          "distance": 16272.0,
+          "vehicleKm": 31450000000.0
+        },
+        "goodsVehicles": {
+          "numVehicles": 352239.0,
+          "distance": 22432.0,
+          "vehicleKm": 7901000000.0
+        },
+        "motorcycles": {
+          "numVehicles": 38068.0,
+          "distance": 4186.0,
+          "vehicleKm": 159000000.0
+        },
+        "tractorsAndMachinery": {
+          "numVehicles": 79404.0,
+          "distance": 24452.0,
+          "vehicleKm": 1942000000.0
+        },
+        "smallPSVs": {
+          "numVehicles": 29159.0,
+          "distance": 36758.0,
+          "vehicleKm": 1072000000.0
+        },
+        "largePSVs": {
+          "numVehicles": 8636.0,
+          "distance": 35920.0,
+          "vehicleKm": 310000000.0
+        },
+        "exemptVehicles": {
+          "numVehicles": 24409.0,
+          "distance": 16888.0,
+          "vehicleKm": 412000000.0
+        },
+        "other": {
+          "numVehicles": 37784.0,
+          "distance": 12570.0,
+          "vehicleKm": 475000000.0
+        }
+      },
+      "goodsByUnladenWeight": [
+        {
+          "unladenWeightBand": "0 - 2 tonnes",
+          "numVehicles": 260038.0,
+          "distance": 19540.0,
+          "vehicleKm": 5081000000.0
+        },
+        {
+          "unladenWeightBand": "2 - 5 tonnes",
+          "numVehicles": 59941.0,
+          "distance": 23725.0,
+          "vehicleKm": 1422000000.0
+        },
+        {
+          "unladenWeightBand": "5 - 7.5 tonnes",
+          "numVehicles": 5470.0,
+          "distance": 25613.0,
+          "vehicleKm": 140000000.0
+        },
+        {
+          "unladenWeightBand": "7.5 - 10 tonnes",
+          "numVehicles": 6642.0,
+          "distance": 32305.0,
+          "vehicleKm": 215000000.0
+        },
+        {
+          "unladenWeightBand": "10 - 12.5 tonnes",
+          "numVehicles": 9586.0,
+          "distance": 47122.0,
+          "vehicleKm": 452000000.0
+        },
+        {
+          "unladenWeightBand": "Over 12.5 tonnes",
+          "numVehicles": 10562.0,
+          "distance": 56028.0,
+          "vehicleKm": 592000000.0
+        }
+      ],
+      "railDieselEnergyTWh": 0.5307500241031878,
+      "railDiesel": 49556491.5129027,
+      "shippingFuelEnergyTWh": 0.7677875112098238,
+      "shippingDiesel": 71688843.25021699,
+      "internationalMarineBunkersTWh": 0.8177625163433231,
+      "actualTotalFinalEnergyTWh": 153.20767268004886,
+      "cleanEnergyAvailableTWh": 3.595346114684625,
+      "cleanEnergyRequiredTWh": null
+    },
+    "2009": {
+      "year": 2009,
+      "status": "published inputs; vehicle mapping unresolved",
+      "electricity": {
+        "existingCarbonFreeElectricity": 4.117598654099454,
+        "existingGasElectricity": 16.298118419192615,
+        "existingCoalElectricity": 4.004313766264874,
+        "existingPeatElectricity": 2.6290840866515195,
+        "existingOilElectricity": 0.9178437331563968,
+        "existingNonRenewableWasteElectricity": 0.0,
+        "netElectricityImports": 0.7637532389999999,
+        "totalElectricitySupply": 28.73071189836486,
+        "windGenerationTWh": 2.955217276,
+        "solarGenerationTWh": 0.0004241595456000001,
+        "hydroGenerationTWh": 0.9017343774537999,
+        "otherRenewableGenerationTWh": 0.26022284110005434,
+        "currentWindCapacityGW": 1.245607,
+        "currentSolarCapacityGW": null,
+        "lowDemandDuringNightGW": null,
+        "lowDemandDuringDayGW": null
+      },
+      "heat": {
+        "residentialHeat": 31.194337783543745,
+        "commercialPublicHeat": 5.9236730024294255,
+        "industryHeat": 14.754212680027669,
+        "homeOfficeHeat": 37.11801078597317
+      },
+      "roadTransport": {
+        "cars": {
+          "numVehicles": 1914924.0,
+          "distance": 17437.0,
+          "vehicleKm": 33391000000.0
+        },
+        "goodsVehicles": {
+          "numVehicles": 344671.0,
+          "distance": 22789.0,
+          "vehicleKm": 7855000000.0
+        },
+        "motorcycles": {
+          "numVehicles": 38741.0,
+          "distance": 3472.0,
+          "vehicleKm": 135000000.0
+        },
+        "tractorsAndMachinery": {
+          "numVehicles": 76007.0,
+          "distance": 18019.0,
+          "vehicleKm": 1370000000.0
+        },
+        "smallPSVs": {
+          "numVehicles": 28959.0,
+          "distance": 32630.0,
+          "vehicleKm": 945000000.0
+        },
+        "largePSVs": {
+          "numVehicles": 8679.0,
+          "distance": 40255.0,
+          "vehicleKm": 349000000.0
+        },
+        "exemptVehicles": {
+          "numVehicles": 25644.0,
+          "distance": 19670.0,
+          "vehicleKm": 504000000.0
+        },
+        "other": {
+          "numVehicles": 41404.0,
+          "distance": 13578.0,
+          "vehicleKm": 562000000.0
+        }
+      },
+      "goodsByUnladenWeight": [
+        {
+          "unladenWeightBand": "0 - 2 tonnes",
+          "numVehicles": 255584.0,
+          "distance": 20239.0,
+          "vehicleKm": 5173000000.0
+        },
+        {
+          "unladenWeightBand": "2 - 5 tonnes",
+          "numVehicles": 61276.0,
+          "distance": 24976.0,
+          "vehicleKm": 1530000000.0
+        },
+        {
+          "unladenWeightBand": "5 - 7.5 tonnes",
+          "numVehicles": 5152.0,
+          "distance": 27874.0,
+          "vehicleKm": 144000000.0
+        },
+        {
+          "unladenWeightBand": "7.5 - 10 tonnes",
+          "numVehicles": 5831.0,
+          "distance": 34638.0,
+          "vehicleKm": 202000000.0
+        },
+        {
+          "unladenWeightBand": "10 - 12.5 tonnes",
+          "numVehicles": 7706.0,
+          "distance": 42472.0,
+          "vehicleKm": 327000000.0
+        },
+        {
+          "unladenWeightBand": "Over 12.5 tonnes",
+          "numVehicles": 9121.0,
+          "distance": 52481.0,
+          "vehicleKm": 479000000.0
+        }
+      ],
+      "railDieselEnergyTWh": 0.4657182537458071,
+      "railDiesel": 43484430.788590774,
+      "shippingFuelEnergyTWh": 0.7482366133924749,
+      "shippingDiesel": 69863362.59500232,
+      "internationalMarineBunkersTWh": 1.1368426202086483,
+      "actualTotalFinalEnergyTWh": 139.14692619305333,
+      "cleanEnergyAvailableTWh": 4.117598654099454,
+      "cleanEnergyRequiredTWh": null
+    },
+    "2010": {
+      "year": 2010,
+      "status": "published inputs; vehicle mapping unresolved",
+      "electricity": {
+        "existingCarbonFreeElectricity": 3.7287812893411028,
+        "existingGasElectricity": 18.1107546992167,
+        "existingCoalElectricity": 3.554715847830524,
+        "existingPeatElectricity": 2.17895207527495,
+        "existingOilElectricity": 0.6031901808633235,
+        "existingNonRenewableWasteElectricity": 0.0,
+        "netElectricityImports": 0.4703260130000001,
+        "totalElectricitySupply": 28.646720105526597,
+        "windGenerationTWh": 2.814659045,
+        "solarGenerationTWh": 0.0004760208576000001,
+        "hydroGenerationTWh": 0.5992311380019999,
+        "otherRenewableGenerationTWh": 0.3144150854815039,
+        "currentWindCapacityGW": 1.375228,
+        "currentSolarCapacityGW": null,
+        "lowDemandDuringNightGW": null,
+        "lowDemandDuringDayGW": null
+      },
+      "heat": {
+        "residentialHeat": 32.79248645822392,
+        "commercialPublicHeat": 6.4607233991381365,
+        "industryHeat": 14.57514671761968,
+        "homeOfficeHeat": 39.25320985736206
+      },
+      "roadTransport": {
+        "cars": {
+          "numVehicles": 1890110.0,
+          "distance": 16789.0,
+          "vehicleKm": 31734000000.0
+        },
+        "goodsVehicles": {
+          "numVehicles": 331779.0,
+          "distance": 20707.0,
+          "vehicleKm": 6870000000.0
+        },
+        "motorcycles": {
+          "numVehicles": 38043.0,
+          "distance": 3238.0,
+          "vehicleKm": 123000000.0
+        },
+        "tractorsAndMachinery": {
+          "numVehicles": 72014.0,
+          "distance": 17536.0,
+          "vehicleKm": 1263000000.0
+        },
+        "smallPSVs": {
+          "numVehicles": 27578.0,
+          "distance": 33804.0,
+          "vehicleKm": 932000000.0
+        },
+        "largePSVs": {
+          "numVehicles": 8373.0,
+          "distance": 36984.0,
+          "vehicleKm": 310000000.0
+        },
+        "exemptVehicles": {
+          "numVehicles": 25587.0,
+          "distance": 18129.0,
+          "vehicleKm": 464000000.0
+        },
+        "other": {
+          "numVehicles": 44215.0,
+          "distance": 10627.0,
+          "vehicleKm": 470000000.0
+        }
+      },
+      "goodsByUnladenWeight": [
+        {
+          "unladenWeightBand": "0 - 2 tonnes",
+          "numVehicles": 246242.0,
+          "distance": 18556.0,
+          "vehicleKm": 4569000000.0
+        },
+        {
+          "unladenWeightBand": "2 - 5 tonnes",
+          "numVehicles": 61125.0,
+          "distance": 22272.0,
+          "vehicleKm": 1361000000.0
+        },
+        {
+          "unladenWeightBand": "5 - 7.5 tonnes",
+          "numVehicles": 4787.0,
+          "distance": 24698.0,
+          "vehicleKm": 118000000.0
+        },
+        {
+          "unladenWeightBand": "7.5 - 10 tonnes",
+          "numVehicles": 5268.0,
+          "distance": 31120.0,
+          "vehicleKm": 164000000.0
+        },
+        {
+          "unladenWeightBand": "10 - 12.5 tonnes",
+          "numVehicles": 6558.0,
+          "distance": 40631.0,
+          "vehicleKm": 266000000.0
+        },
+        {
+          "unladenWeightBand": "Over 12.5 tonnes",
+          "numVehicles": 7798.0,
+          "distance": 50101.0,
+          "vehicleKm": 391000000.0
+        }
+      ],
+      "railDieselEnergyTWh": 0.4621595711780508,
+      "railDiesel": 43152154.17162006,
+      "shippingFuelEnergyTWh": 0.7504734427973976,
+      "shippingDiesel": 70072216.88117625,
+      "internationalMarineBunkersTWh": 1.6139636768264307,
+      "actualTotalFinalEnergyTWh": 138.0776050717083,
+      "cleanEnergyAvailableTWh": 3.7287812893411028,
+      "cleanEnergyRequiredTWh": null
+    },
+    "2011": {
+      "year": 2011,
+      "status": "published inputs; vehicle mapping unresolved",
+      "electricity": {
+        "existingCarbonFreeElectricity": 5.423593128402713,
+        "existingGasElectricity": 15.432198498057321,
+        "existingCoalElectricity": 3.9447721782587393,
+        "existingPeatElectricity": 2.129778269526458,
+        "existingOilElectricity": 0.23368498934715473,
+        "existingNonRenewableWasteElectricity": 0.0,
+        "netElectricityImports": 0.4900950839999998,
+        "totalElectricitySupply": 27.65412214759239,
+        "windGenerationTWh": 4.380314702700001,
+        "solarGenerationTWh": 0.00054198336,
+        "hydroGenerationTWh": 0.7066870246139998,
+        "otherRenewableGenerationTWh": 0.3360494177287133,
+        "currentWindCapacityGW": 1.5957979999999998,
+        "currentSolarCapacityGW": null,
+        "lowDemandDuringNightGW": null,
+        "lowDemandDuringDayGW": null
+      },
+      "heat": {
+        "residentialHeat": 27.99369374453283,
+        "commercialPublicHeat": 5.905146237902281,
+        "industryHeat": 13.394365509879833,
+        "homeOfficeHeat": 33.89883998243511
+      },
+      "roadTransport": {
+        "cars": {
+          "numVehicles": 1886421.0,
+          "distance": 16771.0,
+          "vehicleKm": 31638000000.0
+        },
+        "goodsVehicles": {
+          "numVehicles": 319530.0,
+          "distance": 20487.0,
+          "vehicleKm": 6546000000.0
+        },
+        "motorcycles": {
+          "numVehicles": 36531.0,
+          "distance": 3125.0,
+          "vehicleKm": 114000000.0
+        },
+        "tractorsAndMachinery": {
+          "numVehicles": 70463.0,
+          "distance": 17480.0,
+          "vehicleKm": 1232000000.0
+        },
+        "smallPSVs": {
+          "numVehicles": 26042.0,
+          "distance": 37233.0,
+          "vehicleKm": 970000000.0
+        },
+        "largePSVs": {
+          "numVehicles": 8203.0,
+          "distance": 37578.0,
+          "vehicleKm": 308000000.0
+        },
+        "exemptVehicles": {
+          "numVehicles": 26173.0,
+          "distance": 17556.0,
+          "vehicleKm": 460000000.0
+        },
+        "other": {
+          "numVehicles": 46160.0,
+          "distance": 8954.0,
+          "vehicleKm": 413000000.0
+        }
+      },
+      "goodsByUnladenWeight": [
+        {
+          "unladenWeightBand": "0 - 2 tonnes",
+          "numVehicles": 236052.0,
+          "distance": 18283.0,
+          "vehicleKm": 4316000000.0
+        },
+        {
+          "unladenWeightBand": "2 - 5 tonnes",
+          "numVehicles": 60638.0,
+          "distance": 22306.0,
+          "vehicleKm": 1353000000.0
+        },
+        {
+          "unladenWeightBand": "5 - 7.5 tonnes",
+          "numVehicles": 4458.0,
+          "distance": 24582.0,
+          "vehicleKm": 110000000.0
+        },
+        {
+          "unladenWeightBand": "7.5 - 10 tonnes",
+          "numVehicles": 4873.0,
+          "distance": 31957.0,
+          "vehicleKm": 156000000.0
+        },
+        {
+          "unladenWeightBand": "10 - 12.5 tonnes",
+          "numVehicles": 6031.0,
+          "distance": 38858.0,
+          "vehicleKm": 234000000.0
+        },
+        {
+          "unladenWeightBand": "Over 12.5 tonnes",
+          "numVehicles": 7479.0,
+          "distance": 50599.0,
+          "vehicleKm": 378000000.0
+        }
+      ],
+      "railDieselEnergyTWh": 0.4623899541812589,
+      "railDiesel": 43173665.189660035,
+      "shippingFuelEnergyTWh": 0.6515119640595968,
+      "shippingDiesel": 60832116.15869252,
+      "internationalMarineBunkersTWh": 1.255958398803837,
+      "actualTotalFinalEnergyTWh": 128.74843784279398,
+      "cleanEnergyAvailableTWh": 5.423593128402713,
+      "cleanEnergyRequiredTWh": null
+    },
+    "2012": {
+      "year": 2012,
+      "status": "published inputs; vehicle mapping unresolved",
+      "electricity": {
+        "existingCarbonFreeElectricity": 5.256268945987827,
+        "existingGasElectricity": 14.13928975218802,
+        "existingCoalElectricity": 5.024358942921312,
+        "existingPeatElectricity": 2.4377859589616513,
+        "existingOilElectricity": 0.23581093079479648,
+        "existingNonRenewableWasteElectricity": 0.04974806009177215,
+        "netElectricityImports": 0.4134748009999999,
+        "totalElectricitySupply": 27.55673739194538,
+        "windGenerationTWh": 4.010478236,
+        "solarGenerationTWh": 0.0006458125248000001,
+        "hydroGenerationTWh": 0.8023487044416001,
+        "otherRenewableGenerationTWh": 0.4427961930214267,
+        "currentWindCapacityGW": 1.7236899999999997,
+        "currentSolarCapacityGW": null,
+        "lowDemandDuringNightGW": null,
+        "lowDemandDuringDayGW": null
+      },
+      "heat": {
+        "residentialHeat": 26.273190212651485,
+        "commercialPublicHeat": 6.236640769207665,
+        "industryHeat": 13.627993837706947,
+        "homeOfficeHeat": 32.50983098185915
+      },
+      "roadTransport": {
+        "cars": {
+          "numVehicles": 1896184.0,
+          "distance": 16388.0,
+          "vehicleKm": 31076000000.0
+        },
+        "goodsVehicles": {
+          "numVehicles": 312866.0,
+          "distance": 19711.0,
+          "vehicleKm": 6167000000.0
+        },
+        "motorcycles": {
+          "numVehicles": 35438.0,
+          "distance": 2996.0,
+          "vehicleKm": 106000000.0
+        },
+        "tractorsAndMachinery": {
+          "numVehicles": 70288.0,
+          "distance": 18633.0,
+          "vehicleKm": 1310000000.0
+        },
+        "smallPSVs": {
+          "numVehicles": 24779.0,
+          "distance": 34698.0,
+          "vehicleKm": 860000000.0
+        },
+        "largePSVs": {
+          "numVehicles": 8241.0,
+          "distance": 36148.0,
+          "vehicleKm": 298000000.0
+        },
+        "exemptVehicles": {
+          "numVehicles": 26095.0,
+          "distance": 17427.0,
+          "vehicleKm": 455000000.0
+        },
+        "other": {
+          "numVehicles": 47906.0,
+          "distance": 7884.0,
+          "vehicleKm": 378000000.0
+        }
+      },
+      "goodsByUnladenWeight": [
+        {
+          "unladenWeightBand": "0 - 2 tonnes",
+          "numVehicles": 230445.0,
+          "distance": 17764.0,
+          "vehicleKm": 4094000000.0
+        },
+        {
+          "unladenWeightBand": "2 - 5 tonnes",
+          "numVehicles": 60291.0,
+          "distance": 21008.0,
+          "vehicleKm": 1267000000.0
+        },
+        {
+          "unladenWeightBand": "5 - 7.5 tonnes",
+          "numVehicles": 4317.0,
+          "distance": 22473.0,
+          "vehicleKm": 97000000.0
+        },
+        {
+          "unladenWeightBand": "7.5 - 10 tonnes",
+          "numVehicles": 4714.0,
+          "distance": 30879.0,
+          "vehicleKm": 146000000.0
+        },
+        {
+          "unladenWeightBand": "10 - 12.5 tonnes",
+          "numVehicles": 5647.0,
+          "distance": 37263.0,
+          "vehicleKm": 210000000.0
+        },
+        {
+          "unladenWeightBand": "Over 12.5 tonnes",
+          "numVehicles": 7454.0,
+          "distance": 47439.0,
+          "vehicleKm": 354000000.0
+        }
+      ],
+      "railDieselEnergyTWh": 0.44731781789100244,
+      "railDiesel": 41766369.55098062,
+      "shippingFuelEnergyTWh": 0.6885180646131764,
+      "shippingDiesel": 64287400.990959525,
+      "internationalMarineBunkersTWh": 1.494906151531105,
+      "actualTotalFinalEnergyTWh": 124.59914931864328,
+      "cleanEnergyAvailableTWh": 5.256268945987827,
+      "cleanEnergyRequiredTWh": null
+    },
+    "2013": {
+      "year": 2013,
+      "status": "published inputs; vehicle mapping unresolved",
+      "electricity": {
+        "existingCarbonFreeElectricity": 5.627719088614874,
+        "existingGasElectricity": 13.1297505933363,
+        "existingCoalElectricity": 4.2825566512041116,
+        "existingPeatElectricity": 2.2814842470219383,
+        "existingOilElectricity": 0.18883051133828227,
+        "existingNonRenewableWasteElectricity": 0.0654699802617954,
+        "netElectricityImports": 2.2421926,
+        "totalElectricitySupply": 27.818003671777305,
+        "windGenerationTWh": 4.541514479999999,
+        "solarGenerationTWh": 0.0008276811072,
+        "hydroGenerationTWh": 0.5994973573869999,
+        "otherRenewableGenerationTWh": 0.48587957012067445,
+        "currentWindCapacityGW": 1.8991969999999998,
+        "currentSolarCapacityGW": null,
+        "lowDemandDuringNightGW": null,
+        "lowDemandDuringDayGW": null
+      },
+      "heat": {
+        "residentialHeat": 25.43922160100047,
+        "commercialPublicHeat": 6.538106847348925,
+        "industryHeat": 14.394080932372333,
+        "homeOfficeHeat": 31.977328448349393
+      },
+      "roadTransport": {
+        "cars": {
+          "numVehicles": 1913939.0,
+          "distance": 16736.0,
+          "vehicleKm": 32031000000.0
+        },
+        "goodsVehicles": {
+          "numVehicles": 312578.0,
+          "distance": 20220.0,
+          "vehicleKm": 6320000000.0
+        },
+        "motorcycles": {
+          "numVehicles": 35670.0,
+          "distance": 2887.0,
+          "vehicleKm": 103000000.0
+        },
+        "tractorsAndMachinery": {
+          "numVehicles": 85801.0,
+          "distance": 15665.0,
+          "vehicleKm": 1344000000.0
+        },
+        "smallPSVs": {
+          "numVehicles": 23605.0,
+          "distance": 36994.0,
+          "vehicleKm": 873000000.0
+        },
+        "largePSVs": {
+          "numVehicles": 8307.0,
+          "distance": 36014.0,
+          "vehicleKm": 299000000.0
+        },
+        "exemptVehicles": {
+          "numVehicles": 26164.0,
+          "distance": 16880.0,
+          "vehicleKm": 442000000.0
+        },
+        "other": {
+          "numVehicles": 57633.0,
+          "distance": 5981.0,
+          "vehicleKm": 345000000.0
+        }
+      },
+      "goodsByUnladenWeight": [
+        {
+          "unladenWeightBand": "0 - 2 tonnes",
+          "numVehicles": 229035.0,
+          "distance": 17880.0,
+          "vehicleKm": 4095000000.0
+        },
+        {
+          "unladenWeightBand": "2 - 5 tonnes",
+          "numVehicles": 60732.0,
+          "distance": 20378.0,
+          "vehicleKm": 1238000000.0
+        },
+        {
+          "unladenWeightBand": "5 - 7.5 tonnes",
+          "numVehicles": 4249.0,
+          "distance": 25267.0,
+          "vehicleKm": 107000000.0
+        },
+        {
+          "unladenWeightBand": "7.5 - 10 tonnes",
+          "numVehicles": 4738.0,
+          "distance": 34504.0,
+          "vehicleKm": 163000000.0
+        },
+        {
+          "unladenWeightBand": "10 - 12.5 tonnes",
+          "numVehicles": 5928.0,
+          "distance": 44316.0,
+          "vehicleKm": 263000000.0
+        },
+        {
+          "unladenWeightBand": "Over 12.5 tonnes",
+          "numVehicles": 7896.0,
+          "distance": 57505.0,
+          "vehicleKm": 454000000.0
+        }
+      ],
+      "railDieselEnergyTWh": 0.4454682680471411,
+      "railDiesel": 41593675.82139507,
+      "shippingFuelEnergyTWh": 0.6734730773900707,
+      "shippingDiesel": 62882640.279184945,
+      "internationalMarineBunkersTWh": 1.6697837500957258,
+      "actualTotalFinalEnergyTWh": 126.75504662861024,
+      "cleanEnergyAvailableTWh": 5.627719088614874,
+      "cleanEnergyRequiredTWh": null
+    },
+    "2014": {
+      "year": 2014,
+      "status": "published inputs; vehicle mapping unresolved",
+      "electricity": {
+        "existingCarbonFreeElectricity": 6.390818630225408,
+        "existingGasElectricity": 12.635047007512219,
+        "existingCoalElectricity": 3.9564341111482277,
+        "existingPeatElectricity": 2.496085824487351,
+        "existingOilElectricity": 0.25869034729541573,
+        "existingNonRenewableWasteElectricity": 0.06959343666231892,
+        "netElectricityImports": 2.149057,
+        "totalElectricitySupply": 27.95572635733094,
+        "windGenerationTWh": 5.140061117,
+        "solarGenerationTWh": 0.0011289534413698632,
+        "hydroGenerationTWh": 0.7086538654099999,
+        "otherRenewableGenerationTWh": 0.5409746943740382,
+        "currentWindCapacityGW": 2.242357,
+        "currentSolarCapacityGW": null,
+        "lowDemandDuringNightGW": null,
+        "lowDemandDuringDayGW": null
+      },
+      "heat": {
+        "residentialHeat": 22.806699767762424,
+        "commercialPublicHeat": 6.24458211150147,
+        "industryHeat": 14.772474271474568,
+        "homeOfficeHeat": 29.051281879263893
+      },
+      "roadTransport": {
+        "cars": {
+          "numVehicles": 1950080.0,
+          "distance": 16740.0,
+          "vehicleKm": 32645000000.0
+        },
+        "goodsVehicles": {
+          "numVehicles": 316687.0,
+          "distance": 22923.0,
+          "vehicleKm": 7259000000.0
+        },
+        "motorcycles": {
+          "numVehicles": 36429.0,
+          "distance": 2835.0,
+          "vehicleKm": 103000000.0
+        },
+        "tractorsAndMachinery": {
+          "numVehicles": 95593.0,
+          "distance": 17228.0,
+          "vehicleKm": 1647000000.0
+        },
+        "smallPSVs": {
+          "numVehicles": 22890.0,
+          "distance": 37041.0,
+          "vehicleKm": 848000000.0
+        },
+        "largePSVs": {
+          "numVehicles": 8637.0,
+          "distance": 35793.0,
+          "vehicleKm": 309000000.0
+        },
+        "exemptVehicles": {
+          "numVehicles": 26211.0,
+          "distance": 17519.0,
+          "vehicleKm": 459000000.0
+        },
+        "other": {
+          "numVehicles": 64906.0,
+          "distance": 8646.0,
+          "vehicleKm": 561000000.0
+        }
+      },
+      "goodsByUnladenWeight": [
+        {
+          "unladenWeightBand": "0 - 2 tonnes",
+          "numVehicles": 228422.0,
+          "distance": 19196.0,
+          "vehicleKm": 4385000000.0
+        },
+        {
+          "unladenWeightBand": "2 - 5 tonnes",
+          "numVehicles": 64102.0,
+          "distance": 26302.0,
+          "vehicleKm": 1686000000.0
+        },
+        {
+          "unladenWeightBand": "5 - 7.5 tonnes",
+          "numVehicles": 4270.0,
+          "distance": 28605.0,
+          "vehicleKm": 122000000.0
+        },
+        {
+          "unladenWeightBand": "7.5 - 10 tonnes",
+          "numVehicles": 4988.0,
+          "distance": 38478.0,
+          "vehicleKm": 192000000.0
+        },
+        {
+          "unladenWeightBand": "10 - 12.5 tonnes",
+          "numVehicles": 6314.0,
+          "distance": 49361.0,
+          "vehicleKm": 312000000.0
+        },
+        {
+          "unladenWeightBand": "Over 12.5 tonnes",
+          "numVehicles": 8591.0,
+          "distance": 65507.0,
+          "vehicleKm": 563000000.0
+        }
+      ],
+      "railDieselEnergyTWh": 0.40865643077134745,
+      "railDiesel": 38156529.48378595,
+      "shippingFuelEnergyTWh": 0.8430816834065319,
+      "shippingDiesel": 78719111.42918132,
+      "internationalMarineBunkersTWh": 1.575834928557437,
+      "actualTotalFinalEnergyTWh": 126.3575279989878,
+      "cleanEnergyAvailableTWh": 6.390818630225408,
+      "cleanEnergyRequiredTWh": null
+    },
+    "2015": {
+      "year": 2015,
+      "status": "published inputs; vehicle mapping unresolved",
+      "electricity": {
+        "existingCarbonFreeElectricity": 7.860120960342383,
+        "existingGasElectricity": 12.367491389071757,
+        "existingCoalElectricity": 4.874180450766206,
+        "existingPeatElectricity": 2.5182204977152702,
+        "existingOilElectricity": 0.4070861196879538,
+        "existingNonRenewableWasteElectricity": 0.07406141557680662,
+        "netElectricityImports": 0.6733700000000001,
+        "totalElectricitySupply": 28.774530833160377,
+        "windGenerationTWh": 6.5729976070000005,
+        "solarGenerationTWh": 0.0020463466797534203,
+        "hydroGenerationTWh": 0.8064901860100001,
+        "otherRenewableGenerationTWh": 0.4785868206526285,
+        "currentWindCapacityGW": 2.4222569999999997,
+        "currentSolarCapacityGW": null,
+        "lowDemandDuringNightGW": null,
+        "lowDemandDuringDayGW": null
+      },
+      "heat": {
+        "residentialHeat": 24.299215809628024,
+        "commercialPublicHeat": 6.641849136403242,
+        "industryHeat": 15.047364286594494,
+        "homeOfficeHeat": 30.941064946031265
+      },
+      "roadTransport": {
+        "cars": {
+          "numVehicles": 1992819.0,
+          "distance": 17573.0,
+          "vehicleKm": 35020000000.0
+        },
+        "goodsVehicles": {
+          "numVehicles": 326277.0,
+          "distance": 21519.0,
+          "vehicleKm": 7021000000.0
+        },
+        "motorcycles": {
+          "numVehicles": 36755.0,
+          "distance": 2775.0,
+          "vehicleKm": 102000000.0
+        },
+        "tractorsAndMachinery": {
+          "numVehicles": 92367.0,
+          "distance": 17298.0,
+          "vehicleKm": 1598000000.0
+        },
+        "smallPSVs": {
+          "numVehicles": 22428.0,
+          "distance": 38099.0,
+          "vehicleKm": 854000000.0
+        },
+        "largePSVs": {
+          "numVehicles": 9019.0,
+          "distance": 34662.0,
+          "vehicleKm": 313000000.0
+        },
+        "exemptVehicles": {
+          "numVehicles": 27019.0,
+          "distance": 16580.0,
+          "vehicleKm": 448000000.0
+        },
+        "other": {
+          "numVehicles": 67278.0,
+          "distance": 6442.0,
+          "vehicleKm": 433000000.0
+        }
+      },
+      "goodsByUnladenWeight": [
+        {
+          "unladenWeightBand": "0 - 2 tonnes",
+          "numVehicles": 230313.0,
+          "distance": 18852.0,
+          "vehicleKm": 4342000000.0
+        },
+        {
+          "unladenWeightBand": "2 - 5 tonnes",
+          "numVehicles": 70572.0,
+          "distance": 22109.0,
+          "vehicleKm": 1560000000.0
+        },
+        {
+          "unladenWeightBand": "5 - 7.5 tonnes",
+          "numVehicles": 4269.0,
+          "distance": 24413.0,
+          "vehicleKm": 104000000.0
+        },
+        {
+          "unladenWeightBand": "7.5 - 10 tonnes",
+          "numVehicles": 5080.0,
+          "distance": 34077.0,
+          "vehicleKm": 173000000.0
+        },
+        {
+          "unladenWeightBand": "10 - 12.5 tonnes",
+          "numVehicles": 6783.0,
+          "distance": 44895.0,
+          "vehicleKm": 305000000.0
+        },
+        {
+          "unladenWeightBand": "Over 12.5 tonnes",
+          "numVehicles": 9260.0,
+          "distance": 58029.0,
+          "vehicleKm": 537000000.0
+        }
+      ],
+      "railDieselEnergyTWh": 0.416474381019104,
+      "railDiesel": 38886496.82718058,
+      "shippingFuelEnergyTWh": 0.8315394658153504,
+      "shippingDiesel": 77641406.70544823,
+      "internationalMarineBunkersTWh": 1.8561938148441168,
+      "actualTotalFinalEnergyTWh": 132.58187900329344,
+      "cleanEnergyAvailableTWh": 7.860120960342383,
+      "cleanEnergyRequiredTWh": null
+    },
+    "2016": {
+      "year": 2016,
+      "status": "published inputs; vehicle mapping unresolved",
+      "electricity": {
+        "existingCarbonFreeElectricity": 7.512018909955794,
+        "existingGasElectricity": 15.32840225804854,
+        "existingCoalElectricity": 4.695861550801896,
+        "existingPeatElectricity": 2.3178850924509753,
+        "existingOilElectricity": 0.29261757827918117,
+        "existingNonRenewableWasteElectricity": 0.07280019073437316,
+        "netElectricityImports": -0.7117485999999998,
+        "totalElectricitySupply": 29.50783698027076,
+        "windGenerationTWh": 6.147042744344942,
+        "solarGenerationTWh": 0.004735490156060275,
+        "hydroGenerationTWh": 0.6810254864640001,
+        "otherRenewableGenerationTWh": 0.6792151889907925,
+        "currentWindCapacityGW": 2.7699059999999998,
+        "currentSolarCapacityGW": null,
+        "lowDemandDuringNightGW": null,
+        "lowDemandDuringDayGW": null
+      },
+      "heat": {
+        "residentialHeat": 25.344603867948845,
+        "commercialPublicHeat": 6.433487413968277,
+        "industryHeat": 15.788955233067353,
+        "homeOfficeHeat": 31.77809128191712
+      },
+      "roadTransport": {
+        "cars": {
+          "numVehicles": 2038268.0,
+          "distance": 17968.0,
+          "vehicleKm": 36623000000.0
+        },
+        "goodsVehicles": {
+          "numVehicles": 338431.0,
+          "distance": 21896.0,
+          "vehicleKm": 7410000000.0
+        },
+        "motorcycles": {
+          "numVehicles": 37461.0,
+          "distance": 2770.0,
+          "vehicleKm": 104000000.0
+        },
+        "tractorsAndMachinery": {
+          "numVehicles": 89237.0,
+          "distance": 17677.0,
+          "vehicleKm": 1577000000.0
+        },
+        "smallPSVs": {
+          "numVehicles": 21935.0,
+          "distance": 39443.0,
+          "vehicleKm": 865000000.0
+        },
+        "largePSVs": {
+          "numVehicles": 9539.0,
+          "distance": 34526.0,
+          "vehicleKm": 329000000.0
+        },
+        "exemptVehicles": {
+          "numVehicles": 27742.0,
+          "distance": 16498.0,
+          "vehicleKm": 458000000.0
+        },
+        "other": {
+          "numVehicles": 68479.0,
+          "distance": 5970.0,
+          "vehicleKm": 409000000.0
+        }
+      },
+      "goodsByUnladenWeight": [
+        {
+          "unladenWeightBand": "0 - 2 tonnes",
+          "numVehicles": 238105.0,
+          "distance": 19133.0,
+          "vehicleKm": 4556000000.0
+        },
+        {
+          "unladenWeightBand": "2 - 5 tonnes",
+          "numVehicles": 73837.0,
+          "distance": 22195.0,
+          "vehicleKm": 1639000000.0
+        },
+        {
+          "unladenWeightBand": "5 - 7.5 tonnes",
+          "numVehicles": 4165.0,
+          "distance": 25963.0,
+          "vehicleKm": 108000000.0
+        },
+        {
+          "unladenWeightBand": "7.5 - 10 tonnes",
+          "numVehicles": 5265.0,
+          "distance": 34547.0,
+          "vehicleKm": 182000000.0
+        },
+        {
+          "unladenWeightBand": "10 - 12.5 tonnes",
+          "numVehicles": 6954.0,
+          "distance": 46758.0,
+          "vehicleKm": 325000000.0
+        },
+        {
+          "unladenWeightBand": "Over 12.5 tonnes",
+          "numVehicles": 10106.0,
+          "distance": 59432.0,
+          "vehicleKm": 601000000.0
+        }
+      ],
+      "railDieselEnergyTWh": 0.4241551091269045,
+      "railDiesel": 39603651.64583609,
+      "shippingFuelEnergyTWh": 0.9992616618138721,
+      "shippingDiesel": 93301742.46628125,
+      "internationalMarineBunkersTWh": 1.8573522721202058,
+      "actualTotalFinalEnergyTWh": 137.07221107472694,
+      "cleanEnergyAvailableTWh": 7.512018909955794,
+      "cleanEnergyRequiredTWh": null
+    },
+    "2017": {
+      "year": 2017,
+      "status": "published inputs; vehicle mapping unresolved",
+      "electricity": {
+        "existingCarbonFreeElectricity": 8.880837617739921,
+        "existingGasElectricity": 15.679855087903821,
+        "existingCoalElectricity": 3.6445383609252744,
+        "existingPeatElectricity": 2.1643795166109734,
+        "existingOilElectricity": 0.1418937888701057,
+        "existingNonRenewableWasteElectricity": 0.15930152096431033,
+        "netElectricityImports": -0.6785025,
+        "totalElectricitySupply": 29.99230339301441,
+        "windGenerationTWh": 7.444036528849948,
+        "solarGenerationTWh": 0.009950356409473973,
+        "hydroGenerationTWh": 0.6916029028039998,
+        "otherRenewableGenerationTWh": 0.7352478296764939,
+        "currentWindCapacityGW": 3.277574,
+        "currentSolarCapacityGW": null,
+        "lowDemandDuringNightGW": null,
+        "lowDemandDuringDayGW": null
+      },
+      "heat": {
+        "residentialHeat": 23.574495037292806,
+        "commercialPublicHeat": 6.156505779397366,
+        "industryHeat": 16.766084618674,
+        "homeOfficeHeat": 29.731000816690173
+      },
+      "roadTransport": {
+        "cars": {
+          "numVehicles": 2079345.0,
+          "distance": 17881.0,
+          "vehicleKm": 37181000000.0
+        },
+        "goodsVehicles": {
+          "numVehicles": 347447.0,
+          "distance": 22407.0,
+          "vehicleKm": 7785000000.0
+        },
+        "motorcycles": {
+          "numVehicles": 39046.0,
+          "distance": 2753.0,
+          "vehicleKm": 108000000.0
+        },
+        "tractorsAndMachinery": {
+          "numVehicles": 88378.0,
+          "distance": 17826.0,
+          "vehicleKm": 1575000000.0
+        },
+        "smallPSVs": {
+          "numVehicles": 21544.0,
+          "distance": 39845.0,
+          "vehicleKm": 858000000.0
+        },
+        "largePSVs": {
+          "numVehicles": 10090.0,
+          "distance": 35795.0,
+          "vehicleKm": 361000000.0
+        },
+        "exemptVehicles": {
+          "numVehicles": 28702.0,
+          "distance": 16105.0,
+          "vehicleKm": 462000000.0
+        },
+        "other": {
+          "numVehicles": 70178.0,
+          "distance": 6025.0,
+          "vehicleKm": 423000000.0
+        }
+      },
+      "goodsByUnladenWeight": [
+        {
+          "unladenWeightBand": "0 - 2 tonnes",
+          "numVehicles": 232298.0,
+          "distance": 19082.0,
+          "vehicleKm": 4433000000.0
+        },
+        {
+          "unladenWeightBand": "2 - 5 tonnes",
+          "numVehicles": 84125.0,
+          "distance": 23089.0,
+          "vehicleKm": 1942000000.0
+        },
+        {
+          "unladenWeightBand": "5 - 7.5 tonnes",
+          "numVehicles": 4512.0,
+          "distance": 24960.0,
+          "vehicleKm": 113000000.0
+        },
+        {
+          "unladenWeightBand": "7.5 - 10 tonnes",
+          "numVehicles": 6168.0,
+          "distance": 33192.0,
+          "vehicleKm": 205000000.0
+        },
+        {
+          "unladenWeightBand": "10 - 12.5 tonnes",
+          "numVehicles": 8120.0,
+          "distance": 44996.0,
+          "vehicleKm": 365000000.0
+        },
+        {
+          "unladenWeightBand": "Over 12.5 tonnes",
+          "numVehicles": 12224.0,
+          "distance": 59528.0,
+          "vehicleKm": 728000000.0
+        }
+      ],
+      "railDieselEnergyTWh": 0.4378508325582147,
+      "railDiesel": 40882430.67770446,
+      "shippingFuelEnergyTWh": 0.8823463588449795,
+      "shippingDiesel": 82385280.9379066,
+      "internationalMarineBunkersTWh": 1.8121135977179434,
+      "actualTotalFinalEnergyTWh": 138.0940052828236,
+      "cleanEnergyAvailableTWh": 8.880837617739921,
+      "cleanEnergyRequiredTWh": null
+    },
+    "2018": {
+      "year": 2018,
+      "status": "published inputs; vehicle mapping unresolved",
+      "electricity": {
+        "existingCarbonFreeElectricity": 10.200347773736627,
+        "existingGasElectricity": 16.013963033537856,
+        "existingCoalElectricity": 2.151741046716114,
+        "existingPeatElectricity": 2.0907164905713547,
+        "existingOilElectricity": 0.13935439662442914,
+        "existingNonRenewableWasteElectricity": 0.30158822624389103,
+        "netElectricityImports": -0.027729929999999514,
+        "totalElectricitySupply": 30.869981037430268,
+        "windGenerationTWh": 8.639766544364258,
+        "solarGenerationTWh": 0.018150700954038396,
+        "hydroGenerationTWh": 0.694089639395,
+        "otherRenewableGenerationTWh": 0.8483408890233306,
+        "currentWindCapacityGW": 3.642338,
+        "currentSolarCapacityGW": null,
+        "lowDemandDuringNightGW": null,
+        "lowDemandDuringDayGW": null
+      },
+      "heat": {
+        "residentialHeat": 25.44948330358697,
+        "commercialPublicHeat": 6.723250321469426,
+        "industryHeat": 17.677430275994542,
+        "homeOfficeHeat": 32.172733625056395
+      },
+      "roadTransport": {
+        "cars": {
+          "numVehicles": 2117463.0,
+          "distance": 16990.0,
+          "vehicleKm": 35975000000.0
+        },
+        "goodsVehicles": {
+          "numVehicles": 354458.0,
+          "distance": 22263.0,
+          "vehicleKm": 7891000000.0
+        },
+        "motorcycles": {
+          "numVehicles": 39851.0,
+          "distance": 2731.0,
+          "vehicleKm": 109000000.0
+        },
+        "tractorsAndMachinery": {
+          "numVehicles": 85820.0,
+          "distance": 17300.0,
+          "vehicleKm": 1485000000.0
+        },
+        "smallPSVs": {
+          "numVehicles": 21319.0,
+          "distance": 39501.0,
+          "vehicleKm": 842000000.0
+        },
+        "largePSVs": {
+          "numVehicles": 10695.0,
+          "distance": 36095.0,
+          "vehicleKm": 386000000.0
+        },
+        "exemptVehicles": {
+          "numVehicles": 29040.0,
+          "distance": 15490.0,
+          "vehicleKm": 450000000.0
+        },
+        "other": {
+          "numVehicles": 70355.0,
+          "distance": 5789.0,
+          "vehicleKm": 407000000.0
+        }
+      },
+      "goodsByUnladenWeight": [
+        {
+          "unladenWeightBand": "0 - 2 tonnes",
+          "numVehicles": 229657.0,
+          "distance": 18812.0,
+          "vehicleKm": 4320000000.0
+        },
+        {
+          "unladenWeightBand": "2 - 5 tonnes",
+          "numVehicles": 92117.0,
+          "distance": 22777.0,
+          "vehicleKm": 2098000000.0
+        },
+        {
+          "unladenWeightBand": "5 - 7.5 tonnes",
+          "numVehicles": 4540.0,
+          "distance": 24886.0,
+          "vehicleKm": 113000000.0
+        },
+        {
+          "unladenWeightBand": "7.5 - 10 tonnes",
+          "numVehicles": 6494.0,
+          "distance": 33909.0,
+          "vehicleKm": 220000000.0
+        },
+        {
+          "unladenWeightBand": "10 - 12.5 tonnes",
+          "numVehicles": 8222.0,
+          "distance": 43778.0,
+          "vehicleKm": 360000000.0
+        },
+        {
+          "unladenWeightBand": "Over 12.5 tonnes",
+          "numVehicles": 13429.0,
+          "distance": 58054.0,
+          "vehicleKm": 780000000.0
+        }
+      ],
+      "railDieselEnergyTWh": 0.44244266934721216,
+      "railDiesel": 41311173.608516544,
+      "shippingFuelEnergyTWh": 0.9759166135354763,
+      "shippingDiesel": 91121999.39640303,
+      "internationalMarineBunkersTWh": 2.0086474155126433,
+      "actualTotalFinalEnergyTWh": 144.42283403313846,
+      "cleanEnergyAvailableTWh": 10.200347773736627,
+      "cleanEnergyRequiredTWh": null
+    },
+    "2019": {
+      "year": 2019,
+      "status": "published inputs; vehicle mapping unresolved",
+      "electricity": {
+        "existingCarbonFreeElectricity": 11.794664422071705,
+        "existingGasElectricity": 15.906184529229172,
+        "existingCoalElectricity": 0.5056268745682921,
+        "existingPeatElectricity": 1.9271062629295452,
+        "existingOilElectricity": 0.2825185166847945,
+        "existingNonRenewableWasteElectricity": 0.2946708724426029,
+        "netElectricityImports": 0.6445404000000001,
+        "totalElectricitySupply": 31.355311877926113,
+        "windGenerationTWh": 10.019484388364258,
+        "solarGenerationTWh": 0.033810929015419294,
+        "hydroGenerationTWh": 0.886583914344,
+        "otherRenewableGenerationTWh": 0.8547851903480301,
+        "currentWindCapacityGW": 4.088093000000001,
+        "currentSolarCapacityGW": null,
+        "lowDemandDuringNightGW": null,
+        "lowDemandDuringDayGW": null
+      },
+      "heat": {
+        "residentialHeat": 24.563065294134134,
+        "commercialPublicHeat": 6.654684448967729,
+        "industryHeat": 17.650860900305698,
+        "homeOfficeHeat": 31.217749743101862
+      },
+      "roadTransport": {
+        "cars": {
+          "numVehicles": 2168099.0,
+          "distance": 16352.0,
+          "vehicleKm": 35453000000.0
+        },
+        "goodsVehicles": {
+          "numVehicles": 362699.0,
+          "distance": 22121.0,
+          "vehicleKm": 8023000000.0
+        },
+        "motorcycles": {
+          "numVehicles": 41471.0,
+          "distance": 2741.0,
+          "vehicleKm": 114000000.0
+        },
+        "tractorsAndMachinery": {
+          "numVehicles": 84170.0,
+          "distance": 16653.0,
+          "vehicleKm": 1402000000.0
+        },
+        "smallPSVs": {
+          "numVehicles": 21457.0,
+          "distance": 39504.0,
+          "vehicleKm": 848000000.0
+        },
+        "largePSVs": {
+          "numVehicles": 11206.0,
+          "distance": 34965.0,
+          "vehicleKm": 392000000.0
+        },
+        "exemptVehicles": {
+          "numVehicles": 29619.0,
+          "distance": 14799.0,
+          "vehicleKm": 438000000.0
+        },
+        "other": {
+          "numVehicles": 72057.0,
+          "distance": 5592.0,
+          "vehicleKm": 403000000.0
+        }
+      },
+      "goodsByUnladenWeight": [
+        {
+          "unladenWeightBand": "0 - 2 tonnes",
+          "numVehicles": 228046.0,
+          "distance": 18584.0,
+          "vehicleKm": 4238000000.0
+        },
+        {
+          "unladenWeightBand": "2 - 5 tonnes",
+          "numVehicles": 100649.0,
+          "distance": 22517.0,
+          "vehicleKm": 2266000000.0
+        },
+        {
+          "unladenWeightBand": "5 - 7.5 tonnes",
+          "numVehicles": 4546.0,
+          "distance": 24482.0,
+          "vehicleKm": 111000000.0
+        },
+        {
+          "unladenWeightBand": "7.5 - 10 tonnes",
+          "numVehicles": 6661.0,
+          "distance": 33338.0,
+          "vehicleKm": 222000000.0
+        },
+        {
+          "unladenWeightBand": "10 - 12.5 tonnes",
+          "numVehicles": 8424.0,
+          "distance": 42233.0,
+          "vehicleKm": 356000000.0
+        },
+        {
+          "unladenWeightBand": "Over 12.5 tonnes",
+          "numVehicles": 14373.0,
+          "distance": 57721.0,
+          "vehicleKm": 830000000.0
+        }
+      ],
+      "railDieselEnergyTWh": 0.46299179158141673,
+      "railDiesel": 43229859.157928735,
+      "shippingFuelEnergyTWh": 1.0393921404044204,
+      "shippingDiesel": 97048752.60545476,
+      "internationalMarineBunkersTWh": 1.653815323562525,
+      "actualTotalFinalEnergyTWh": 144.3821037332918,
+      "cleanEnergyAvailableTWh": 11.794664422071705,
+      "cleanEnergyRequiredTWh": null
+    },
+    "2020": {
+      "year": 2020,
+      "status": "published inputs; vehicle mapping unresolved",
+      "electricity": {
+        "existingCarbonFreeElectricity": 13.46096175534758,
+        "existingGasElectricity": 16.236381292395766,
+        "existingCoalElectricity": 0.673131271344284,
+        "existingPeatElectricity": 0.9186189635768648,
+        "existingOilElectricity": 0.3894165256947487,
+        "existingNonRenewableWasteElectricity": 0.2988923441594678,
+        "netElectricityImports": -0.15185380999999962,
+        "totalElectricitySupply": 31.82554834251871,
+        "windGenerationTWh": 11.549420032264255,
+        "solarGenerationTWh": 0.05511402965054797,
+        "hydroGenerationTWh": 0.932655429334,
+        "otherRenewableGenerationTWh": 0.9237722640987762,
+        "currentWindCapacityGW": 4.298891,
+        "currentSolarCapacityGW": null,
+        "lowDemandDuringNightGW": null,
+        "lowDemandDuringDayGW": null
+      },
+      "heat": {
+        "residentialHeat": 26.948483590099844,
+        "commercialPublicHeat": 5.81500164175286,
+        "industryHeat": 17.760939431977743,
+        "homeOfficeHeat": 32.763485231852705
+      },
+      "roadTransport": {
+        "cars": {
+          "numVehicles": 2211416.0,
+          "distance": 11803.0,
+          "vehicleKm": 26102000000.0
+        },
+        "goodsVehicles": {
+          "numVehicles": 372145.0,
+          "distance": 19571.0,
+          "vehicleKm": 7283000000.0
+        },
+        "motorcycles": {
+          "numVehicles": 43491.0,
+          "distance": 2328.0,
+          "vehicleKm": 101000000.0
+        },
+        "tractorsAndMachinery": {
+          "numVehicles": 85504.0,
+          "distance": 15078.0,
+          "vehicleKm": 1289000000.0
+        },
+        "smallPSVs": {
+          "numVehicles": 19989.0,
+          "distance": 27626.0,
+          "vehicleKm": 552000000.0
+        },
+        "largePSVs": {
+          "numVehicles": 10833.0,
+          "distance": 24976.0,
+          "vehicleKm": 271000000.0
+        },
+        "exemptVehicles": {
+          "numVehicles": 29820.0,
+          "distance": 10953.0,
+          "vehicleKm": 327000000.0
+        },
+        "other": {
+          "numVehicles": 74824.0,
+          "distance": 4165.0,
+          "vehicleKm": 312000000.0
+        }
+      },
+      "goodsByUnladenWeight": [
+        {
+          "unladenWeightBand": "0 - 2 tonnes",
+          "numVehicles": 240873.0,
+          "distance": 16893.0,
+          "vehicleKm": 4069000000.0
+        },
+        {
+          "unladenWeightBand": "2 - 5 tonnes",
+          "numVehicles": 99719.0,
+          "distance": 19782.0,
+          "vehicleKm": 1973000000.0
+        },
+        {
+          "unladenWeightBand": "5 - 7.5 tonnes",
+          "numVehicles": 4048.0,
+          "distance": 22075.0,
+          "vehicleKm": 89000000.0
+        },
+        {
+          "unladenWeightBand": "7.5 - 10 tonnes",
+          "numVehicles": 6110.0,
+          "distance": 29840.0,
+          "vehicleKm": 182000000.0
+        },
+        {
+          "unladenWeightBand": "10 - 12.5 tonnes",
+          "numVehicles": 7702.0,
+          "distance": 37774.0,
+          "vehicleKm": 291000000.0
+        },
+        {
+          "unladenWeightBand": "Over 12.5 tonnes",
+          "numVehicles": 13693.0,
+          "distance": 49578.0,
+          "vehicleKm": 679000000.0
+        }
+      ],
+      "railDieselEnergyTWh": 0.368870226835131,
+      "railDiesel": 34441664.50374706,
+      "shippingFuelEnergyTWh": 1.271105746200507,
+      "shippingDiesel": 118684009.91601375,
+      "internationalMarineBunkersTWh": 1.802265917159884,
+      "actualTotalFinalEnergyTWh": 130.61911254924252,
+      "cleanEnergyAvailableTWh": 13.46096175534758,
+      "cleanEnergyRequiredTWh": null
+    },
+    "2021": {
+      "year": 2021,
+      "status": "published inputs; vehicle mapping unresolved",
+      "electricity": {
+        "existingCarbonFreeElectricity": 11.607395063182697,
+        "existingGasElectricity": 15.155529621904039,
+        "existingCoalElectricity": 2.71752930402974,
+        "existingPeatElectricity": 0.32485744232420466,
+        "existingOilElectricity": 1.453163140722165,
+        "existingNonRenewableWasteElectricity": 0.32204742050363433,
+        "netElectricityImports": 1.5875931100000007,
+        "totalElectricitySupply": 33.168115102666476,
+        "windGenerationTWh": 9.77838051678648,
+        "solarGenerationTWh": 0.08464632856899183,
+        "hydroGenerationTWh": 0.7494199369870291,
+        "otherRenewableGenerationTWh": 0.994948280840197,
+        "currentWindCapacityGW": 4.308311,
+        "currentSolarCapacityGW": null,
+        "lowDemandDuringNightGW": null,
+        "lowDemandDuringDayGW": null
+      },
+      "heat": {
+        "residentialHeat": 25.163245783246516,
+        "commercialPublicHeat": 6.212808561210988,
+        "industryHeat": 17.65094665821269,
+        "homeOfficeHeat": 31.376054344457504
+      },
+      "roadTransport": {
+        "cars": {
+          "numVehicles": 2248916.0,
+          "distance": 13436.0,
+          "vehicleKm": 30216000000.0
+        },
+        "goodsVehicles": {
+          "numVehicles": 382144.0,
+          "distance": 23059.0,
+          "vehicleKm": 8812000000.0
+        },
+        "motorcycles": {
+          "numVehicles": 45853.0,
+          "distance": 2421.0,
+          "vehicleKm": 111000000.0
+        },
+        "tractorsAndMachinery": {
+          "numVehicles": 86469.0,
+          "distance": 14489.0,
+          "vehicleKm": 1253000000.0
+        },
+        "smallPSVs": {
+          "numVehicles": 18108.0,
+          "distance": 25470.0,
+          "vehicleKm": 461000000.0
+        },
+        "largePSVs": {
+          "numVehicles": 10639.0,
+          "distance": 24469.0,
+          "vehicleKm": 260000000.0
+        },
+        "exemptVehicles": {
+          "numVehicles": 29933.0,
+          "distance": 12717.0,
+          "vehicleKm": 381000000.0
+        },
+        "other": {
+          "numVehicles": 79342.0,
+          "distance": 4841.0,
+          "vehicleKm": 384000000.0
+        }
+      },
+      "goodsByUnladenWeight": [
+        {
+          "unladenWeightBand": "0 - 2 tonnes",
+          "numVehicles": 230193.0,
+          "distance": 19634.0,
+          "vehicleKm": 4520000000.0
+        },
+        {
+          "unladenWeightBand": "2 - 5 tonnes",
+          "numVehicles": 116920.0,
+          "distance": 23427.0,
+          "vehicleKm": 2739000000.0
+        },
+        {
+          "unladenWeightBand": "5 - 7.5 tonnes",
+          "numVehicles": 4302.0,
+          "distance": 24558.0,
+          "vehicleKm": 106000000.0
+        },
+        {
+          "unladenWeightBand": "7.5 - 10 tonnes",
+          "numVehicles": 6589.0,
+          "distance": 33564.0,
+          "vehicleKm": 221000000.0
+        },
+        {
+          "unladenWeightBand": "10 - 12.5 tonnes",
+          "numVehicles": 8576.0,
+          "distance": 42558.0,
+          "vehicleKm": 365000000.0
+        },
+        {
+          "unladenWeightBand": "Over 12.5 tonnes",
+          "numVehicles": 15565.0,
+          "distance": 55353.0,
+          "vehicleKm": 862000000.0
+        }
+      ],
+      "railDieselEnergyTWh": 0.39892017724203555,
+      "railDiesel": 37247448.85546551,
+      "shippingFuelEnergyTWh": 1.3592541412244123,
+      "shippingDiesel": 126914485.64186859,
+      "internationalMarineBunkersTWh": 2.01477652638899,
+      "actualTotalFinalEnergyTWh": 133.5521509996289,
+      "cleanEnergyAvailableTWh": 11.607395063182697,
+      "cleanEnergyRequiredTWh": null
+    },
+    "2022": {
+      "year": 2022,
+      "status": "published inputs; vehicle mapping unresolved",
+      "electricity": {
+        "existingCarbonFreeElectricity": 13.071986400285224,
+        "existingGasElectricity": 16.529626419323876,
+        "existingCoalElectricity": 2.3662871724372545,
+        "existingPeatElectricity": 0.24722021272504885,
+        "existingOilElectricity": 1.0751334341974415,
+        "existingNonRenewableWasteElectricity": 0.31920963168120203,
+        "netElectricityImports": 0.2518979999999999,
+        "totalElectricitySupply": 33.86136127065005,
+        "windGenerationTWh": 11.208431528864258,
+        "solarGenerationTWh": 0.14866436931821556,
+        "hydroGenerationTWh": 0.7012017148914736,
+        "otherRenewableGenerationTWh": 1.0136887872112796,
+        "currentWindCapacityGW": 4.503401,
+        "currentSolarCapacityGW": null,
+        "lowDemandDuringNightGW": null,
+        "lowDemandDuringDayGW": null
+      },
+      "heat": {
+        "residentialHeat": 21.24930768368128,
+        "commercialPublicHeat": 6.0229295747665965,
+        "industryHeat": 16.623366012913724,
+        "homeOfficeHeat": 27.272237258447877
+      },
+      "roadTransport": {
+        "cars": {
+          "numVehicles": 2266198.0,
+          "distance": 15423.0,
+          "vehicleKm": 34952000000.0
+        },
+        "goodsVehicles": {
+          "numVehicles": 387723.0,
+          "distance": 24131.0,
+          "vehicleKm": 9356000000.0
+        },
+        "motorcycles": {
+          "numVehicles": 47056.0,
+          "distance": 2425.0,
+          "vehicleKm": 114000000.0
+        },
+        "tractorsAndMachinery": {
+          "numVehicles": 83780.0,
+          "distance": 15628.0,
+          "vehicleKm": 1309000000.0
+        },
+        "smallPSVs": {
+          "numVehicles": 17819.0,
+          "distance": 35393.0,
+          "vehicleKm": 631000000.0
+        },
+        "largePSVs": {
+          "numVehicles": 11380.0,
+          "distance": 28872.0,
+          "vehicleKm": 329000000.0
+        },
+        "exemptVehicles": {
+          "numVehicles": 30356.0,
+          "distance": 14459.0,
+          "vehicleKm": 439000000.0
+        },
+        "other": {
+          "numVehicles": 83238.0,
+          "distance": 5691.0,
+          "vehicleKm": 474000000.0
+        }
+      },
+      "goodsByUnladenWeight": [
+        {
+          "unladenWeightBand": "0 - 2 tonnes",
+          "numVehicles": 222953.0,
+          "distance": 20460.0,
+          "vehicleKm": 4562000000.0
+        },
+        {
+          "unladenWeightBand": "2 - 5 tonnes",
+          "numVehicles": 127727.0,
+          "distance": 24145.0,
+          "vehicleKm": 3084000000.0
+        },
+        {
+          "unladenWeightBand": "5 - 7.5 tonnes",
+          "numVehicles": 4421.0,
+          "distance": 25524.0,
+          "vehicleKm": 113000000.0
+        },
+        {
+          "unladenWeightBand": "7.5 - 10 tonnes",
+          "numVehicles": 6802.0,
+          "distance": 35035.0,
+          "vehicleKm": 238000000.0
+        },
+        {
+          "unladenWeightBand": "10 - 12.5 tonnes",
+          "numVehicles": 9100.0,
+          "distance": 44385.0,
+          "vehicleKm": 404000000.0
+        },
+        {
+          "unladenWeightBand": "Over 12.5 tonnes",
+          "numVehicles": 16721.0,
+          "distance": 57132.0,
+          "vehicleKm": 955000000.0
+        }
+      ],
+      "railDieselEnergyTWh": 0.44601027211098554,
+      "railDiesel": 41644283.11026943,
+      "shippingFuelEnergyTWh": 1.1467136831170246,
+      "shippingDiesel": 107069438.19953546,
+      "internationalMarineBunkersTWh": 1.5270833361450526,
+      "actualTotalFinalEnergyTWh": 139.47303006499675,
+      "cleanEnergyAvailableTWh": 13.071986400285224,
+      "cleanEnergyRequiredTWh": null
+    },
+    "2023": {
+      "year": 2023,
+      "status": "published inputs; vehicle mapping unresolved",
+      "electricity": {
+        "existingCarbonFreeElectricity": 14.090717217600485,
+        "existingGasElectricity": 15.350674697441823,
+        "existingCoalElectricity": 1.2107608791726472,
+        "existingPeatElectricity": 0.1518325427122981,
+        "existingOilElectricity": 0.2276597205823453,
+        "existingNonRenewableWasteElectricity": 0.3265696562302983,
+        "netElectricityImports": 3.2747509,
+        "totalElectricitySupply": 34.63296561373989,
+        "windGenerationTWh": 11.67062931236426,
+        "solarGenerationTWh": 0.6464816751203211,
+        "hydroGenerationTWh": 0.9427514833850085,
+        "otherRenewableGenerationTWh": 0.8308547467308904,
+        "currentWindCapacityGW": 4.706891,
+        "currentSolarCapacityGW": null,
+        "lowDemandDuringNightGW": null,
+        "lowDemandDuringDayGW": null
+      },
+      "heat": {
+        "residentialHeat": 19.8263757127634,
+        "commercialPublicHeat": 5.841904482858342,
+        "industryHeat": 15.848017912073749,
+        "homeOfficeHeat": 25.668280195621744
+      },
+      "roadTransport": {
+        "cars": {
+          "numVehicles": 2311503.0,
+          "distance": 15196.0,
+          "vehicleKm": 35126000000.0
+        },
+        "goodsVehicles": {
+          "numVehicles": 395129.0,
+          "distance": 22207.0,
+          "vehicleKm": 8775000000.0
+        },
+        "motorcycles": {
+          "numVehicles": 47938.0,
+          "distance": 2648.0,
+          "vehicleKm": 127000000.0
+        },
+        "tractorsAndMachinery": {
+          "numVehicles": 81559.0,
+          "distance": 15558.0,
+          "vehicleKm": 1269000000.0
+        },
+        "smallPSVs": {
+          "numVehicles": 17894.0,
+          "distance": 38785.0,
+          "vehicleKm": 694000000.0
+        },
+        "largePSVs": {
+          "numVehicles": 11934.0,
+          "distance": 35147.0,
+          "vehicleKm": 419000000.0
+        },
+        "exemptVehicles": {
+          "numVehicles": 30978.0,
+          "distance": 13865.0,
+          "vehicleKm": 430000000.0
+        },
+        "other": {
+          "numVehicles": 86275.0,
+          "distance": 5304.0,
+          "vehicleKm": 458000000.0
+        }
+      },
+      "goodsByUnladenWeight": [
+        {
+          "unladenWeightBand": "0 - 2 tonnes",
+          "numVehicles": 221249.0,
+          "distance": 18560.0,
+          "vehicleKm": 4106000000.0
+        },
+        {
+          "unladenWeightBand": "2 - 5 tonnes",
+          "numVehicles": 135893.0,
+          "distance": 22264.0,
+          "vehicleKm": 3026000000.0
+        },
+        {
+          "unladenWeightBand": "5 - 7.5 tonnes",
+          "numVehicles": 4348.0,
+          "distance": 22568.0,
+          "vehicleKm": 98000000.0
+        },
+        {
+          "unladenWeightBand": "7.5 - 10 tonnes",
+          "numVehicles": 6905.0,
+          "distance": 31905.0,
+          "vehicleKm": 220000000.0
+        },
+        {
+          "unladenWeightBand": "10 - 12.5 tonnes",
+          "numVehicles": 9281.0,
+          "distance": 40092.0,
+          "vehicleKm": 372000000.0
+        },
+        {
+          "unladenWeightBand": "Over 12.5 tonnes",
+          "numVehicles": 17451.0,
+          "distance": 54555.0,
+          "vehicleKm": 952000000.0
+        }
+      ],
+      "railDieselEnergyTWh": 0.46763364011521213,
+      "railDiesel": 43663271.719440915,
+      "shippingFuelEnergyTWh": 1.2155579310755704,
+      "shippingDiesel": 113497472.55607568,
+      "internationalMarineBunkersTWh": 1.5528815668895959,
+      "actualTotalFinalEnergyTWh": 140.4236695033388,
+      "cleanEnergyAvailableTWh": 14.090717217600485,
+      "cleanEnergyRequiredTWh": null
+    },
+    "2024": {
+      "year": 2024,
+      "status": "incomplete: CSO mileage unavailable",
+      "electricity": {
+        "existingCarbonFreeElectricity": 14.322917329369767,
+        "existingGasElectricity": 15.095854144043686,
+        "existingCoalElectricity": 0.6326112430301627,
+        "existingPeatElectricity": 0.0,
+        "existingOilElectricity": 0.6017116676206367,
+        "existingNonRenewableWasteElectricity": 0.29084581635893103,
+        "netElectricityImports": 5.0608471,
+        "totalElectricitySupply": 36.00478730042318,
+        "windGenerationTWh": 11.460338701364257,
+        "solarGenerationTWh": 1.0930931095199998,
+        "hydroGenerationTWh": 0.7661115439767234,
+        "otherRenewableGenerationTWh": 1.0033739745087866,
+        "currentWindCapacityGW": 4.909591000000001,
+        "currentSolarCapacityGW": null,
+        "lowDemandDuringNightGW": null,
+        "lowDemandDuringDayGW": null
+      },
+      "heat": {
+        "residentialHeat": 20.880050036284313,
+        "commercialPublicHeat": 6.304354605324117,
+        "industryHeat": 16.258071410616676,
+        "homeOfficeHeat": 27.18440464160843
+      },
+      "roadTransport": {
+        "cars": {
+          "numVehicles": null,
+          "distance": null,
+          "vehicleKm": null
+        },
+        "goodsVehicles": {
+          "numVehicles": null,
+          "distance": null,
+          "vehicleKm": null
+        },
+        "motorcycles": {
+          "numVehicles": null,
+          "distance": null,
+          "vehicleKm": null
+        },
+        "tractorsAndMachinery": {
+          "numVehicles": null,
+          "distance": null,
+          "vehicleKm": null
+        },
+        "smallPSVs": {
+          "numVehicles": null,
+          "distance": null,
+          "vehicleKm": null
+        },
+        "largePSVs": {
+          "numVehicles": null,
+          "distance": null,
+          "vehicleKm": null
+        },
+        "exemptVehicles": {
+          "numVehicles": null,
+          "distance": null,
+          "vehicleKm": null
+        },
+        "other": {
+          "numVehicles": null,
+          "distance": null,
+          "vehicleKm": null
+        }
+      },
+      "goodsByUnladenWeight": [],
+      "railDieselEnergyTWh": 0.4994702545120068,
+      "railDiesel": 46635878.105696246,
+      "shippingFuelEnergyTWh": 1.1272306611856635,
+      "shippingDiesel": 105250295.1620601,
+      "internationalMarineBunkersTWh": 1.4180965679338189,
+      "actualTotalFinalEnergyTWh": 143.7601415725743,
+      "cleanEnergyAvailableTWh": 14.322917329369767,
+      "cleanEnergyRequiredTWh": null
+    },
+    "2025": {
+      "year": 2025,
+      "status": "incomplete: 2025 interim energy balance; mileage unavailable",
+      "electricity": {
+        "existingCarbonFreeElectricity": 15.182720775845363,
+        "existingGasElectricity": 15.008771318284614,
+        "existingCoalElectricity": 0.23986715965852684,
+        "existingPeatElectricity": 0.0,
+        "existingOilElectricity": 0.4786003235077753,
+        "existingNonRenewableWasteElectricity": 0.28622310637427445,
+        "netElectricityImports": 6.1296437,
+        "totalElectricitySupply": 37.32582638367055,
+        "windGenerationTWh": 11.836259496364256,
+        "solarGenerationTWh": 1.6439581382399997,
+        "hydroGenerationTWh": 0.6479239786263042,
+        "otherRenewableGenerationTWh": 1.0545791626148022,
+        "currentWindCapacityGW": 5.094891,
+        "currentSolarCapacityGW": null,
+        "lowDemandDuringNightGW": null,
+        "lowDemandDuringDayGW": null
+      },
+      "heat": {
+        "residentialHeat": null,
+        "commercialPublicHeat": null,
+        "industryHeat": null,
+        "homeOfficeHeat": null
+      },
+      "roadTransport": {
+        "cars": {
+          "numVehicles": null,
+          "distance": null,
+          "vehicleKm": null
+        },
+        "goodsVehicles": {
+          "numVehicles": null,
+          "distance": null,
+          "vehicleKm": null
+        },
+        "motorcycles": {
+          "numVehicles": null,
+          "distance": null,
+          "vehicleKm": null
+        },
+        "tractorsAndMachinery": {
+          "numVehicles": null,
+          "distance": null,
+          "vehicleKm": null
+        },
+        "smallPSVs": {
+          "numVehicles": null,
+          "distance": null,
+          "vehicleKm": null
+        },
+        "largePSVs": {
+          "numVehicles": null,
+          "distance": null,
+          "vehicleKm": null
+        },
+        "exemptVehicles": {
+          "numVehicles": null,
+          "distance": null,
+          "vehicleKm": null
+        },
+        "other": {
+          "numVehicles": null,
+          "distance": null,
+          "vehicleKm": null
+        }
+      },
+      "goodsByUnladenWeight": [],
+      "railDieselEnergyTWh": null,
+      "railDiesel": null,
+      "shippingFuelEnergyTWh": null,
+      "shippingDiesel": null,
+      "internationalMarineBunkersTWh": 1.3019303295191613,
+      "actualTotalFinalEnergyTWh": null,
+      "cleanEnergyAvailableTWh": 15.182720775845363,
+      "cleanEnergyRequiredTWh": null
+    }
+  }
+}
