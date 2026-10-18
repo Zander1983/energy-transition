@@ -8,9 +8,14 @@ import "./Home.css";
 // These can later be replaced with images in public/images.
 const images = {
   hero: "https://images.unsplash.com/photo-1500534623283-312aade485b7?w=1800&q=85",
+
   grid: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=85",
+
   wind: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=800&q=85",
-  landscape: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=85",
+
+  infrastructure: "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=800&q=85",
+
+  policy: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=85",
 };
 
 const principles = [
@@ -60,14 +65,14 @@ const researchAreas = [
     title: "Resources and infrastructure",
     description:
       "Investigating the infrastructure, firm generation, storage, materials, embodied energy and investment needed to support Ireland's transition.",
-    image: images.landscape,
+    image: images.infrastructure,
   },
   {
     number: "04",
     title: "Policy and delivery",
     description:
       "Assessing whether national plans, regulatory decisions and infrastructure development are aligned, and identifying barriers between policy ambition and delivery.",
-    image: images.grid,
+    image: images.policy,
   },
 ];
 
