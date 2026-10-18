@@ -186,3 +186,77 @@ main {
     gap: 4px;
   }
 }
+
+
+/* Main navigation */
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 18px 5%;
+  background: #111827;
+  color: white;
+}
+
+.site-brand {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.nav-links button {
+  background: transparent;
+  border: none;
+  color: #d1d5db;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 10px 14px;
+  border-radius: 6px;
+}
+
+.nav-links button:hover,
+.nav-links button.active {
+  background: #374151;
+  color: white;
+}
+
+/* Home page */
+.home-page {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 24px;
+  line-height: 1.8;
+}
+
+.home-page h1 {
+  font-size: clamp(28px, 5vw, 42px);
+  margin-bottom: 20px;
+}
+
+.home-page h2 {
+  margin-top: 40px;
+}
+
+.home-intro {
+  font-size: 21px;
+  color: #475569;
+}
+
+.tracker-link {
+  margin-top: 30px;
+  padding: 14px 24px;
+  background: #111827;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
