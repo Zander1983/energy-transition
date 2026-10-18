@@ -10,7 +10,7 @@ const images = {
   hero: "https://images.unsplash.com/photo-1500534623283-312aade485b7?w=1800&q=85",
   grid: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=85",
   wind: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=800&q=85",
-  landscape: "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=800&q=85",
+  landscape: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=85",
 };
 
 const principles = [
@@ -147,65 +147,55 @@ function Home({ navigate }) {
       </section>
 
       {/* MISSION */}
-      <section
-        id="mission"
-        className="west-mission"
-      >
 
-        <div className="west-section-label">
-          OUR MISSION
-        </div>
+{/* MISSION */}
+<section id="mission" className="west-mission">
 
-        <div className="west-mission-layout">
+  <div className="west-section-label">
+    OUR MISSION
+  </div>
 
-          <h2>
-            Our goal is the decarbonisation of Ireland's
-            energy system through a whole-systems approach.
-          </h2>
+  <div className="west-mission-layout">
 
-          <div>
+    <h2>
+      Decarbonising Ireland's energy system
+      through a whole-systems approach.
+    </h2>
 
-            <p>
-              Decarbonising Ireland requires more than
-              generating renewable electricity. Fossil fuels
-              remain deeply embedded in transport, heating,
-              agriculture, industry and the wider economy.
-            </p>
+    <div>
 
-            <p>
-              WEST — Whole Energy Systems & Transition
-              Research Group — brings together researchers
-              and energy professionals to understand how
-              these interconnected systems can transition
-              towards a sustainable, low-carbon future.
-            </p>
 
-            <p>
-              We investigate what is technically achievable,
-              what infrastructure and resources are required,
-              what different pathways will cost, and whether
-              current policies can deliver their stated
-              objectives.
-            </p>
+<p>
+  Ireland's energy transition is often discussed in terms
+  of renewable electricity generation. Yet electricity is
+  only one part of the picture. Oil and gas remain central
+  to transport, heating, agriculture and industry, and
+  progress in renewable electricity does not necessarily
+  translate into reduced fossil fuel consumption across
+  the wider economy.
+</p>
 
-            <p>
-              Our research is technology-neutral, transparent
-              and grounded in physical evidence. We publish
-              assumptions, methods and uncertainties, and
-              allow the findings to inform our conclusions.
-            </p>
+<p>
+  WEST takes a whole-systems approach to decarbonisation,
+  examining how energy supply, demand, infrastructure and
+  policy interact. We assess Ireland's energy system on
+  the evidence: <strong>what it costs, what it can physically
+  deliver, and whether current policy will meet its
+  stated aims.</strong>
+</p>
 
-            <p>
-              Our initial modelling work focuses on Ireland's
-              electricity system, including grid constraints,
-              renewable generation, storage, interconnection
-              and future demand. Our wider ambition encompasses
-              the entire energy system.
-            </p>
+<p>
+  We publish our methods and data, and report what we
+  find regardless of whose position it supports.
+</p>
 
-          </div>
-        </div>
-      </section>
+    </div>
+
+  </div>
+
+</section>
+
+
 
       {/* RESEARCH FOCUS */}
       <section className="west-research">
