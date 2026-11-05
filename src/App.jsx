@@ -61,10 +61,7 @@ export default function App() {
             <div className="west-accent-line" />
 
             <p>
-              We are an independent group of researchers
-              based in Ireland, examining the country's
-              energy transition through data-driven research,
-              transparent methods and objective analysis.
+              We are an independent research group studying Ireland's energy transition, using energy data and system modelling to understand what's achievable, what's working and where the challenges lie.
             </p>
 
             <div className="west-simple-actions">
