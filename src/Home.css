@@ -1,467 +1,355 @@
 
-/* WEST website */
-.west-home {
-  --navy: #10233b;
-  --green: #36875b;
-  --muted: #536174;
-  font-family: Inter, Arial, sans-serif;
-  color: var(--navy);
+/* =====================================
+   WEST - Full-screen website
+   ===================================== */
+
+/* Remove page margins */
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  max-width: none;
 }
 
-.west-home *,
-.west-nav * {
-  box-sizing: border-box;
+body {
+  min-width: 320px;
 }
 
-.west-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 18px 5%;
-  background: #fff;
-  border-bottom: 1px solid #e7ebef;
-}
-
-.west-brand {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  border: 0;
-  background: none;
-  cursor: pointer;
+#root {
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
   text-align: left;
+}
+
+/* Main site */
+.west-site {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Inter, Arial, sans-serif;
   color: #10233b;
 }
 
-.west-brand-name {
+.west-site * {
+  box-sizing: border-box;
+}
+
+/* Home page: one continuous background */
+.west-home-mode {
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(5, 22, 39, 0.88) 0%,
+      rgba(5, 22, 39, 0.62) 38%,
+      rgba(5, 22, 39, 0.08) 100%
+    ),
+    url("/windfarm.jpg");
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* =====================================
+   Navigation
+   ===================================== */
+
+.west-nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  flex-wrap: wrap;
+  padding: 20px 6%;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Transparent navigation on homepage */
+.west-home-mode .west-nav {
+  background: rgba(5, 22, 39, 0.48);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.west-brand {
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: #10233b;
   font-size: 38px;
   font-weight: 850;
   letter-spacing: -2px;
+  line-height: 1;
+  cursor: pointer;
 }
 
-.west-brand-name span {
-  color: #36875b;
+.west-home-mode .west-brand {
+  color: white;
 }
 
-.west-brand-description {
-  border-left: 1px solid #cbd5e1;
-  padding-left: 18px;
-  font-size: 12px;
-  line-height: 1.5;
-  font-weight: 600;
+.west-brand span {
+  color: #43b879;
 }
 
 .west-nav-links {
   display: flex;
-  gap: 24px;
+  align-items: center;
   flex-wrap: wrap;
+  gap: 35px;
 }
 
 .west-nav-links button {
-  border: 0;
   background: transparent;
-  padding: 10px 2px;
-  font-size: 14px;
-  color: #10233b;
-  cursor: pointer;
+  border: none;
   border-bottom: 3px solid transparent;
+  border-radius: 0;
+  padding: 10px 2px;
+  color: #344256;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
 }
 
-.west-nav-links button.selected,
-.west-nav-links button:hover {
-  border-bottom-color: #36875b;
+.west-home-mode .west-nav-links button {
+  color: white;
 }
 
-/* Hero */
-.west-hero {
-  min-height: 580px;
+.west-nav-links button:hover,
+.west-nav-links button.selected {
+  border-bottom-color: #43b879;
+}
+
+/* =====================================
+   Homepage hero
+   ===================================== */
+
+.west-simple-hero {
+  flex: 1;
+  min-height: 650px;
+  width: 100%;
   display: flex;
   align-items: center;
-  background-position: center;
-  background-size: cover;
-  position: relative;
 }
 
-.west-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(9, 27, 46, .94) 0%,
-    rgba(9, 27, 46, .78) 43%,
-    rgba(9, 27, 46, .12) 100%
-  );
-}
-
-.west-hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 760px;
-  padding: 85px 7%;
+.west-simple-content {
+  width: 100%;
+  max-width: 1100px;
+  padding: 70px 6%;
   color: white;
 }
 
-.west-eyebrow,
-.west-section-label {
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 2px;
-  color: #50b783;
-  margin-bottom: 22px;
-}
-
-.west-hero h1 {
-  font-size: clamp(38px, 5vw, 68px);
-  line-height: 1.08;
-  letter-spacing: -2px;
-  margin: 0 0 14px;
+.west-simple-content h1 {
   color: white;
+  font-size: clamp(36px, 4vw, 60px);
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+  margin: 0;
+  max-width: 1000px;
 }
 
-.west-hero-subtitle {
-  font-size: 27px;
-  font-weight: 600;
-  color: #9bd8b3;
-  margin: 0 0 26px;
+.west-accent-line {
+  width: 85px;
+  height: 5px;
+  background: #43b879;
+  margin: 40px 0;
 }
 
-.west-hero-description {
-  max-width: 610px;
-  font-size: 17px;
-  line-height: 1.8;
-  color: #e0e8ed;
+.west-simple-content p {
+  color: #f0f4f8;
+  font-size: clamp(17px, 1.6vw, 22px);
+  line-height: 1.75;
+  max-width: 880px;
+  margin: 0 0 42px;
 }
 
-.west-actions {
+.west-simple-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 32px;
-}
-
-.west-primary-button,
-.west-secondary-button {
-  display: inline-block;
-  padding: 15px 22px;
-  border-radius: 5px;
-  font-size: 14px;
-  font-weight: 700;
-  text-decoration: none;
-  cursor: pointer;
+  align-items: center;
+  gap: 22px;
 }
 
 .west-primary-button {
-  background: #36875b;
+  background: #318a5a;
   color: white;
-  border: 1px solid #36875b;
-}
-
-.west-secondary-button {
-  background: transparent;
-  border: 1px solid #e0e8ed;
-  color: white;
-}
-
-/* Principles */
-.west-principles {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  padding: 48px 6%;
-  background: white;
-  gap: 30px;
-}
-
-.west-principle {
-  padding-right: 22px;
-  border-right: 1px solid #e2e8f0;
-}
-
-.west-principle:last-child {
-  border-right: none;
-}
-
-.west-principle-number {
-  font-size: 13px;
-  font-weight: 800;
-  color: #36875b;
-}
-
-.west-principle h3 {
-  font-size: 17px;
-  margin: 14px 0 10px;
-}
-
-.west-principle p {
-  font-size: 14px;
-  line-height: 1.7;
-  color: #536174;
-}
-
-/* Mission */
-.west-mission {
-  padding: 90px 7%;
-  background: #f1f5f7;
-  scroll-margin-top: 30px;
-}
-
-.west-mission-layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8%;
-}
-
-.west-mission h2 {
-  font-size: clamp(28px, 3vw, 44px);
-  line-height: 1.2;
-  letter-spacing: -1px;
-  margin: 0;
-}
-
-.west-mission p {
-  color: #455568;
-  line-height: 1.9;
-  font-size: 16px;
-  margin: 0 0 18px;
-}
-
-/* Research */
-.west-research {
-  padding: 85px 7%;
-  background: white;
-}
-
-.west-section-heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  gap: 35px;
-  margin-bottom: 35px;
-}
-
-.west-section-heading h2 {
-  font-size: 38px;
-  margin: 0;
-}
-
-.west-section-heading > p {
-  max-width: 350px;
-  color: #536174;
-  line-height: 1.7;
-}
-
-
-.west-research-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 20px;
-}
-
-.west-research-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.west-card-body {
-  padding: 20px;
-  text-align: left;
-}
-
-.west-card-body h3 {
-  font-size: 19px;
-  line-height: 1.3;
-}
-
-.west-card-body p {
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-@media (max-width: 1100px) {
-  .west-research-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 600px) {
-  .west-research-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.west-research-card {
-  background: #f5f7f8;
-  overflow: hidden;
+  border: 1px solid #318a5a;
   border-radius: 6px;
+  padding: 18px 30px;
+  font-size: 17px;
+  font-weight: 650;
+  cursor: pointer;
 }
 
-.west-research-card img {
+.west-primary-button:hover {
+  background: #267247;
+}
+
+.west-outline-button {
+  background: rgba(0,0,0,0.12);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.85);
+  border-radius: 6px;
+  padding: 18px 30px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.west-outline-button:hover {
+  background: rgba(255,255,255,0.14);
+}
+
+/* =====================================
+   Footer
+   ===================================== */
+
+.west-simple-footer {
   width: 100%;
-  height: 220px;
-  object-fit: cover;
-  display: block;
-}
-
-.west-card-body {
-  padding: 26px;
-}
-
-.west-card-body > span {
-  color: #36875b;
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 1px;
-}
-
-.west-card-body h3 {
-  font-size: 21px;
-  margin: 12px 0;
-}
-
-.west-card-body p {
-  color: #536174;
-  font-size: 14px;
-  line-height: 1.8;
-}
-
-/* Tracker call to action */
-.west-tracker-banner {
-  background: #10233b;
-  color: white;
-  padding: 65px 7%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
-}
-
-.west-tracker-banner h2 {
-  color: white;
-  font-size: 34px;
-  margin: 0 0 12px;
-}
-
-.west-tracker-banner p {
-  color: #d1dbe5;
-  max-width: 600px;
-  line-height: 1.7;
-}
-
-.west-tracker-banner button {
-  flex-shrink: 0;
-}
-
-.west-footer {
-  padding: 30px 7%;
-  display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
   gap: 15px;
+  padding: 24px 5%;
   background: #091726;
-  color: #cbd5e1;
+  color: #dce5ed;
+  font-size: 13px;
+}
+
+.west-home-mode .west-simple-footer {
+  background: rgba(5, 22, 39, 0.78);
+}
+
+/* =====================================
+   Contact page
+   ===================================== */
+
+.west-contact-page {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 6%;
+  background: #f3f6f8;
+}
+
+.west-contact-content {
+  width: 100%;
+  max-width: 700px;
+}
+
+.west-small-label {
+  color: #318a5a;
   font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
 }
 
-.west-footer strong {
-  font-size: 22px;
-  color: white;
+.west-contact-content h1 {
+  font-size: clamp(36px, 5vw, 56px);
+  margin: 0 0 25px;
 }
 
-/* Mobile */
+.west-contact-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #536174;
+  margin-bottom: 25px;
+}
+
+.west-contact-content a {
+  font-size: 21px;
+  font-weight: 650;
+  color: #287248;
+  overflow-wrap: anywhere;
+}
+
+/* =====================================
+   Tracker page
+   ===================================== */
+
+.west-tracker-page {
+  flex: 1;
+  width: 100%;
+  background: white;
+}
+
+/* =====================================
+   Responsive layout
+   ===================================== */
+
 @media (max-width: 800px) {
-  .west-principles,
-  .west-research-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .west-mission-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .west-tracker-banner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-@media (max-width: 540px) {
   .west-nav {
-    padding: 16px 5%;
+    padding: 18px 5%;
   }
 
-  .west-brand-name {
-    font-size: 30px;
+  .west-nav-links {
+    gap: 18px;
   }
 
-  .west-hero {
-    min-height: 540px;
-  }
-
-  .west-hero-content {
+  .west-simple-content {
     padding: 60px 6%;
   }
 
-  .west-hero::before {
-    background: rgba(9, 27, 46, .78);
+  .west-home-mode {
+    background-image:
+      linear-gradient(
+        rgba(5,22,39,0.82),
+        rgba(5,22,39,0.62)
+      ),
+      url("/windfarm.jpg");
+
+    background-position: center;
   }
 
-  .west-principles,
-.west-research-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-  .west-principle {
-    border-right: none;
-    border-bottom: 1px solid #e2e8f0;
+  .west-simple-hero {
+    min-height: 580px;
   }
 
-  .west-section-heading {
-    display: block;
+  .west-simple-content h1 {
+    font-size: clamp(30px, 6vw, 44px);
+  }
+
+  .west-simple-content p {
+    font-size: 17px;
   }
 }
 
+@media (max-width: 500px) {
+  .west-nav {
+    align-items: flex-start;
+  }
 
-/* Compact mission section */
-.west-mission {
-  padding: 65px 7%;
-}
+  .west-brand {
+    font-size: 32px;
+  }
 
-.west-mission .west-section-label {
-  text-align: left;
-  margin-bottom: 24px;
-}
+  .west-nav-links {
+    gap: 14px;
+  }
 
-.west-mission-layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 7%;
-  align-items: start;
-  text-align: left;
-}
+  .west-nav-links button {
+    font-size: 13px;
+  }
 
-.west-mission h2 {
-  font-size: clamp(26px, 2.8vw, 38px);
-  line-height: 1.25;
-  letter-spacing: -0.8px;
-  text-align: left;
-}
+  .west-simple-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
 
-.west-mission p {
-  font-size: 16px;
-  line-height: 1.75;
-  text-align: left;
-  margin: 0 0 16px;
-}
+  .west-primary-button,
+  .west-outline-button {
+    width: 100%;
+  }
 
-@media (max-width: 800px) {
-  .west-mission-layout {
-    grid-template-columns: 1fr;
-    gap: 24px;
+  .west-simple-footer {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
