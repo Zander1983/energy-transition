@@ -74,7 +74,7 @@ const researchers = [
   name: "Marcel Sarnecki",
   role: "Mechanical Engineer & Renewable Energy Researcher | Technological University of the Shannon",
   initials: "MS",
-  image: "/marcel-sarnecki.jpg",
+  image: "/marcel.png",
   bio: `Marcel is a Mechanical Engineer and postgraduate researcher
   at Technological University of the Shannon (TUS). He holds
   a First Class Honours degree in Mechanical Engineering
