@@ -58,7 +58,7 @@ const researchers = [
     bio: `Mark is an energy transition researcher at the
     Sustainable Development Research Institute, Technological
     University of the Shannon. He has a background in data
-    science and software development, with over 15 years'
+    science and software engineering, with over 15 years'
     experience in the tech start-up sector.
 
     His research focuses on energy systems, the feasibility
@@ -68,6 +68,33 @@ const researchers = [
     research on renewable energy modelling and the energy
     requirements of Irish agriculture.`,
   },
+
+  
+{
+  name: "Marcel Sarnecki",
+  role: "Mechanical Engineer & Renewable Energy Researcher | Technological University of the Shannon",
+  initials: "MS",
+  image: "/marcel-sarnecki.jpg",
+  bio: `Marcel is a Mechanical Engineer and postgraduate researcher
+  at Technological University of the Shannon (TUS). He holds
+  a First Class Honours degree in Mechanical Engineering
+  and is pursuing postgraduate research in renewable energy,
+  with a Ph.D. transfer in progress.
+
+  His research focuses on wind energy dispatch-down and
+  strategies to reduce renewable electricity losses on
+  the island of Ireland. Working with Dr Niall Burke,
+  he investigates the causes and geographical distribution
+  of wind energy constraints and curtailment, using
+  electricity system data and computational modelling.
+
+  His technical expertise includes Python programming,
+  data analysis, geospatial modelling and renewable energy
+  visualisation. He has also developed TerraWatt, a
+  geospatial application combining wind resource data
+  and electricity grid infrastructure to identify
+  promising locations for renewable energy development.`,
+},
 
 ];
 

@@ -82,12 +82,6 @@ export default function App() {
                 Ireland's Energy Transition →
               </button>
 
-              <button
-                className="west-outline-button"
-                onClick={() => navigate("contact")}
-              >
-                Contact us
-              </button>
             </div>
           </div>
         </main>
