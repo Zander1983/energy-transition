@@ -4,7 +4,7 @@ import "./AboutUs.css";
 const researchers = [
     {
   name: "Cian Murtagh, M.Eng., C.Eng.",
-  role: "Chartered Engineer | Lecturer, Atlantic Technological University",
+  role: "Chartered Engineer | Lecturer",
   initials: "CM",
   image: "/cian.png",
   bio: `Cian is a Chartered Engineer with over 18 years of experience
@@ -25,7 +25,7 @@ const researchers = [
 
 {
   name: "Dr Niall Burke",
-  role: "Lecturer & Researcher | Technological University of the Shannon",
+  role: "Lecturer & Researcher",
   initials: "NB",
   image: "/niall.png",
   bio: `Niall is a Lecturer in Mechanical Engineering at
@@ -61,7 +61,7 @@ const researchers = [
     science and software engineering, with over 15 years'
     experience in the tech start-up sector.
 
-    His research focuses on energy systems, the feasibility
+    His research focuses on Energy Return on Energy Invested (EROI) of energy systems, the feasibility
     of the energy transition, and the relationship between
     energy, agriculture and the wider economy. He holds
     an MSc in Renewable Energy Systems and has published
@@ -72,7 +72,7 @@ const researchers = [
   
 {
   name: "Marcel Sarnecki",
-  role: "Mechanical Engineer & Renewable Energy Researcher | Technological University of the Shannon",
+  role: "Mechanical Engineer & Renewable Energy Researcher",
   initials: "MS",
   image: "/marcel.png",
   bio: `Marcel is a Mechanical Engineer and postgraduate researcher
