@@ -1,6 +1,7 @@
 
 import { useState } from "react";
 import EnergyTransitionTracker from "./EnergyTransitionTracker.jsx";
+import AboutUs from "./AboutUs.jsx";
 import "./App.css";
 import "./Home.css";
 
@@ -38,7 +39,14 @@ export default function App() {
             onClick={() => navigate("tracker")}
           >
             Ireland's Energy Transition
-          </button> 
+          </button>
+
+          <button
+            className={page === "about" ? "selected" : ""}
+            onClick={() => navigate("about")}
+          >
+            About Us
+          </button>
 
           <button
             className={page === "contact" ? "selected" : ""}
@@ -53,15 +61,17 @@ export default function App() {
         <main className="west-simple-hero">
           <div className="west-simple-content">
             <h1>
-              Whole Energy Systems
-              <br />
-              &amp; Transition Research Group
+              Whole Energy Systems Transition Group
             </h1>
 
             <div className="west-accent-line" />
 
             <p>
-              We are an independent research group studying Ireland's energy transition, using energy data and system modelling to understand what's achievable, what's working and where the challenges lie.
+              We are an independent research group studying
+              Ireland's energy transition, using energy data
+              and system modelling to understand what's
+              achievable, what's working and where the
+              challenges lie.
             </p>
 
             <div className="west-simple-actions">
@@ -80,6 +90,18 @@ export default function App() {
               </button>
             </div>
           </div>
+        </main>
+      )}
+
+      {page === "tracker" && (
+        <main className="west-tracker-page">
+          <EnergyTransitionTracker />
+        </main>
+      )}
+
+      {page === "about" && (
+        <main className="west-about-wrapper">
+          <AboutUs />
         </main>
       )}
 
@@ -105,16 +127,13 @@ export default function App() {
         </main>
       )}
 
-      {page === "tracker" && (
-        <main className="west-tracker-page">
-          <EnergyTransitionTracker />
-        </main>
-      )}
-
       <footer className="west-simple-footer">
-        <span>© {new Date().getFullYear()} WEST</span>
         <span>
-          Whole Energy Systems &amp; Transition Research Group
+          © {new Date().getFullYear()} WEST
+        </span>
+
+        <span>
+          Whole Energy Systems Transition Group
         </span>
       </footer>
     </div>
